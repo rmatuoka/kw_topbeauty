@@ -1,4 +1,4 @@
-KwTopbeauty::Application.routes.draw do
+KwAdministrador::Application.routes.draw do
 
   resources :user_sessions
   resources :users
