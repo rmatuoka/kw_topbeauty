@@ -10,7 +10,26 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111004192741) do
+ActiveRecord::Schema.define(:version => 20120228180012) do
+
+  create_table "categories", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "highlights_file_name"
+    t.string   "highlights_content_type"
+    t.integer  "highlights_file_size"
+    t.datetime "highlights_updated_at"
+  end
+
+  create_table "products", :force => true do |t|
+    t.integer  "category_id"
+    t.string   "name"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "roles", :force => true do |t|
     t.string   "name",              :limit => 40

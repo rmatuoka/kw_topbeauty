@@ -44,13 +44,9 @@ jQuery(document).ready(function()
 				<div id="Item_category" >
 					<div id="Item_content">
 						<ul id="menu">
-							<li class="parent aberto"><a href="#" title=""><h3>Empresas</h3></a>
+							<li class="parent aberto"><a href="#" title=""><h3>Produtos</h3></a>
 								<ul class="sub-menu">
-									<li>Empresa 1</li>
-									<li>Empresa 2</li>
-									<li>Empresa 3</li>
-									<li>Empresa 4</li>
-									<li>Empresa 5</li>
+									<li><%= link_to "Gerenciar Categorias",admin_categories_path %></li>
 								</ul>
 							</li>
 							<%if User.find(current_user.id).has_role? :admin %>

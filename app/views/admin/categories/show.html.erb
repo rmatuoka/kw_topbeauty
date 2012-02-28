@@ -1,0 +1,21 @@
+<% title @category.name %>
+
+<h1><%=@category.name%></h1><br />
+<br />
+<p>Verifique se as informações abaixo estão corretas.</p><br />
+<br />
+<p>
+  <strong>Nome:</strong>
+  <%= @category.name %>
+</p>
+<p>
+  <strong>Descrição:</strong>
+  <%= @category.description %>
+</p>
+<%= image_tag @category.highlights.url%>
+<%= image_tag @category.highlights.url(:medium)%>
+<%= image_tag @category.highlights.url(:thumb)%>
+<br />
+<br />
+<br />
+<p><%= submit_tag "Voltar",:type=>"button",:onclick=>"window.open('"+admin_categories_path+"','_self');", :class => "Bt_enviar", :style=>"margin-right: 5px;"%></p>

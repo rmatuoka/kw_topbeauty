@@ -1,0 +1,19 @@
+<div id="Box_form">
+<%= form_for [:admin, @category], :html => { :multipart => true } do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :name,"Nome" %>
+    <%= f.text_field :name %>
+  </p>
+<br />
+  <p>
+    <%= f.label :description,"Descrição" %><br />
+    <%= f.text_area :description %>
+  </p>
+<br />
+  <%= f.file_field :highlights %> 
+<br />
+<br />
+  <p><%= submit_tag "Voltar",:type=>"button",:onclick=>"window.open('"+admin_categories_path+"','_self');", :class => "Bt_enviar", :style=>"margin-right: 5px;"%> <%= f.submit "Salvar", :class => "Bt_enviar" %></p>
+<% end %>
+</div>

@@ -1,0 +1,29 @@
+<% title  "Lista de Categorias" %>
+
+<h1>Lista de Categorias</h1><br />
+<p>Verifique abaixo a lista das Categorias cadastrados no sistema.</p><br />
+<br />
+<p style="text-align: right;"><%= submit_tag "+ Criar novo",:type=>"button",:onclick=>"window.open('"+new_admin_category_path+"','_self');", :class => "Bt_enviar"%> </p>
+<br />
+<table cellspacing="0" class="tablesorter">
+  <thead> 
+  <tr>
+    <th style="width:30%;">Nome</th>
+    <th style="width:35%;">Descrição</th>
+    <th colspan="4" style="width:35%;">Ações</th>
+  </tr>
+  </thead> 
+  <tbody>
+  <% for category in @categories %>
+    <tr>
+      <td><%= category.name %></td>
+      <td><%= category.description %></td>
+
+      <td><%= link_to "Visualizar", [:admin, category] %></td>
+      <td><%= link_to "Editar", edit_admin_category_path(category) %></td>
+      <td><%= link_to "Excluir", [:admin, category], :confirm => 'Are you sure?', :method => :delete %></td>
+      <td><%= link_to "Produtos", admin_category_products_path(category) %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
