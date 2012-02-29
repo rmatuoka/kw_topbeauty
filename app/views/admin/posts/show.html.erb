@@ -1,0 +1,25 @@
+﻿<% title "Noticias" %>
+
+<h1>Notícias</h1><br />
+<br />
+<p>Verifique se as informações abaixo estão corretas.</p><br />
+<br />
+<p>
+  <strong>Resumo:</strong>
+  <%= @post.sumary %>
+</p>
+<p>
+  <strong>Descrição:</strong>
+</p>
+<div style="width: 600px; min-height: 143px; height: auto;background: #EEE;">
+	  <%=raw @post.description %>
+</div>
+<br />
+<%= image_tag @post.image.url(:large)%>
+<%= image_tag @post.image.url(:medium)%>
+<%= image_tag @post.image.url(:thumb)%>
+<br />
+<br />
+<br />
+<p><%= submit_tag "Voltar",:type=>"button",:onclick=>"window.open('"+admin_posts_path+"','_self');", :class => "Bt_enviar", :style=>"margin-right: 5px;"%></p>
+

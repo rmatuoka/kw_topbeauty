@@ -1,0 +1,23 @@
+﻿<% content_for :head do %>
+<%= include_tiny_mce_if_needed %>
+<% end %>
+<div id="Box_form">
+<%= form_for [:admin, @post], :html => { :multipart => true } do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :sumary, "Resumo" %><br />
+    <%= f.text_field :sumary %>
+  </p>
+<br />  
+  <p>
+    <%= f.label :description ,"Descrição" %><br />
+    <%= f.text_area :description, :class => "mceEditor"%>
+
+  </p>
+ <br /> 
+  <%= f.file_field :image %>
+  <br /> 
+  <br />
+  <p><%= submit_tag "Voltar",:type=>"button",:onclick=>"window.open('"+admin_posts_path+"','_self');", :class => "Bt_enviar", :style=>"margin-right: 5px;"%> <%= f.submit "Salvar", :class => "Bt_enviar" %></p>
+<% end %>
+</div>

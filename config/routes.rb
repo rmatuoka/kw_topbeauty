@@ -9,6 +9,7 @@ KwTopbeauty::Application.routes.draw do
     resources :categories do
 	resources :products 
     end
+    resources :posts 
     resources :static_contents
     resources :users do
       collection do

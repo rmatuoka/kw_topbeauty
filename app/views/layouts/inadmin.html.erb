@@ -49,6 +49,11 @@ jQuery(document).ready(function()
 									<li><%= link_to "Gerenciar Categorias",admin_categories_path %></li>
 								</ul>
 							</li>
+							<li class="parent aberto"><a href="#" title=""><h3>Noticias</h3></a>
+								<ul class="sub-menu">
+									<li><%= link_to "Gerenciar Noticias",admin_posts_path %></li>
+								</ul>
+							</li>
 							<%if User.find(current_user.id).has_role? :admin %>
 							<li class="parent aberto"><a href="#" title=""><h3>Ajuste do Site</h3></a>
 								<ul class="sub-menu">
