@@ -1,0 +1,403 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Top Beauty</title>
+<%=stylesheet_link_tag "reset.css" %>
+<%=stylesheet_link_tag "geral.css" %>
+<%=stylesheet_link_tag "slider.css" %>
+<%=stylesheet_link_tag "jquery.fancybox.css" %>
+<%=javascript_include_tag  "jquery.js" %>
+<%=javascript_include_tag  "jcycle.js" %>
+<%=javascript_include_tag  "easing.js" %>
+<%=javascript_include_tag  "jquery.fancybox.js" %>
+<script>
+$(document).ready(function() {
+	$(".fancybox").fancybox();
+	$(".various").fancybox({
+		maxWidth	: 800,
+		maxHeight	: 600,
+		fitToView	: false,
+		width		: '75%',
+		height		: '85%',
+		autoSize	: false,
+		closeClick	: false,
+		openEffect	: 'none',
+		closeEffect	: 'none'
+	});
+    $('#slideshow') 
+	.cycle({ 
+		fx:     'scrollLeft', 
+		speed:  'slow', 
+		timeout: 6000,
+    	speedIn: 1500,
+		speedOut: 7500,
+    	easeIn: 'easeInOutCirc',
+		pager:  '#nav'
+	});
+	$('.bt_box_nature_on').click(function(){
+		$('#box_nature_off').slideToggle('slow').addClass('hide');
+		$('#box_nature_on').slideToggle('slow').removeClass('hide');
+	});
+	
+	$('.bt_box_nature_off').click(function(){
+		$('#box_nature_on').slideToggle('slow').addClass('hide');
+		$('#box_nature_off').slideToggle('slow').removeClass('hide');
+	});
+	$('.bt_box_glitter_on').click(function(){
+		$('#box_glitter_off').slideToggle('slow').addClass('hide');
+		$('#box_glitter_on').slideToggle('slow').removeClass('hide');
+	});
+	$('.bt_box_glitter_off').click(function(){
+		$('#box_glitter_on').slideToggle('slow').addClass('hide');
+		$('#box_glitter_off').slideToggle('slow').removeClass('hide');
+	});
+	$('.bt_box_3d_on').click(function(){
+		$('#box_3d_off').slideToggle('slow').addClass('hide');
+		$('#box_3d_on').slideToggle('slow').removeClass('hide');
+	});
+	
+	$('.bt_box_3d_off').click(function(){
+		$('#box_3d_on').slideToggle('slow').addClass('hide');
+		$('#box_3d_off').slideToggle('slow').removeClass('hide');
+	});
+	$('.bt_box_crash_on').click(function(){
+		$('#box_crash_off').slideToggle('slow').addClass('hide');
+		$('#box_crash_on').slideToggle('slow').removeClass('hide');
+	});
+	
+	$('.bt_box_crash_off').click(function(){
+		$('#box_crash_on').slideToggle('slow').addClass('hide');
+		$('#box_crash_off').slideToggle('slow').removeClass('hide');
+	});
+	$('.bt_box_oneftwo_on').click(function(){
+		$('#box_oneftwo_off').slideToggle('slow').addClass('hide');
+		$('#box_oneftwo_on').slideToggle('slow').removeClass('hide');
+	});
+	
+	$('.bt_box_oneftwo_off').click(function(){
+		$('#box_oneftwo_on').slideToggle('slow').addClass('hide');
+		$('#box_oneftwo_off').slideToggle('slow').removeClass('hide');
+	});
+	
+	$('.bt_box_basica_on').click(function(){
+		$('#box_basica_off').slideToggle('slow').addClass('hide');
+		$('#box_basica_on').slideToggle('slow').removeClass('hide');
+	});
+	
+	$('.bt_box_basica_off').click(function(){
+		$('#box_basica_on').slideToggle('slow').addClass('hide');
+		$('#box_basica_off').slideToggle('slow').removeClass('hide');
+	});
+	
+	$('.bt_box_sensitive_on').click(function(){
+		$('#box_sensitive_off').slideToggle('slow').addClass('hide');
+		$('#box_sensitive_on').slideToggle('slow').removeClass('hide');
+	});
+	
+	$('.bt_box_sensitive_off').click(function(){
+		$('#box_sensitive_on').slideToggle('slow').addClass('hide');
+		$('#box_sensitive_off').slideToggle('slow').removeClass('hide');
+	});
+	
+	$('.bt_box_adriane_on').click(function(){
+		$('#box_adriane_off').slideToggle('slow').addClass('hide');
+		$('#box_adriane_on').slideToggle('slow').removeClass('hide');
+	});
+	
+	$('.bt_box_adriane_off').click(function(){
+		$('#box_adriane_on').slideToggle('slow').addClass('hide');
+		$('#box_adriane_off').slideToggle('slow').removeClass('hide');
+	});
+});
+
+</script>
+</head>
+
+<body>
+<div id='section'>
+	<div id='header'>
+    	<div id='menu'>
+        	<div id='logo'>
+            	<a href="index.html" target="_self"><img src='images/logo.png' border="0" width="153" height="282" /></a>
+            </div>
+            <div id='m-itens'>
+            	<ul>
+                	<a href="empresa.html" target="_self"><li><img src='images/m_topbeaty.png' border="0" width="107" height="21" /></li></a>
+                    <a href="produtos.html" target="_self"><li><img src='images/m_produtos.png' border="0" width="93" height="21" /></li></a>
+                    <a href="onde_encontrar.html" target="_self"><li><img src='images/m_ondeencontrar.png' border="0" width="142" height="21" /></li></a>
+                    <a href="contato.html" class="various fancybox.iframe" ><li><img src='images/m_contato.png' border="0" width="82" height="21" /></li></a>
+               	</ul>
+            </div>
+            <div id='contato'>
+            	<a href="contato.html" target="_self"><img src='images/bt_contato.png' border="0" width="120" height="67" /></a>
+            </div>
+        </div>
+    </div>
+    <div id='slider'>
+    	<div id='slideshow'>
+            <div id="slide1">
+                <div id='elementos-nature'>
+                    <div id='logo-nature'>
+                        <img src="images/logo_nature.png" border="0" width="419" height="69" />
+                    </div>
+                    <div id='esmalte-nature'>
+                        <img src="images/esmaltes_nature.png" border="0" width="548" height="298" />
+                    </div>
+                    <div id='garota-nature'>
+                        <img src="images/garota_nature.png" border="0" width="1102" height="692" />
+                    </div>
+                </div>
+                <div id='box_nature'>
+                    <div id='box_nature_off'>
+                        <a href="#" class="bt_box_nature_on"><img src="images/bt_box_slider_on.png" /></a>
+                    </div>
+                    <div id='box_nature_on' class="hide">
+                        <a href="#" class="bt_box_nature_off"><img src="images/bt_box_slider_off.png" /></a>
+                    </div>
+                </div>
+            </div>
+            <div id="slide2">
+                <div id='elementos-glitter'>
+                    <div id='logo-glitter'>
+                        <img src="images/logo_glitter.png" border="0" width="573" height="134" />
+                    </div>
+                    <div id='esmalte-glitter'>
+                        <img src="images/esmaltes_glitter.png" border="0" width="401" height="329" />
+                    </div>
+                    <div id='garota-glitter'>
+                        <img src="images/garota_glitter.png" border="0" width="558" height="664" />
+                    </div>
+                </div>
+                <div id='box_glitter'>
+                    <div id='box_glitter_off'>
+                        <a href="#" class="bt_box_glitter_on"><img src="images/bt_box_slider_on.png" /></a>
+                    </div>
+                    <div id='box_glitter_on' class="hide">
+                        <a href="#" class="bt_box_glitter_off"><img src="images/bt_box_slider_off.png" /></a>
+                    </div>
+                </div>
+            </div>
+            <div id="slide3">
+                <div id='elementos-3d'>
+                    <div id='logo-3d'>
+                        <img src="images/logo_3d.png" border="0" width="260" height="333" />
+                    </div>
+                    <div id='esmalte-3d'>
+                        <img src="images/esmaltes_3d.png" border="0" width="374" height="338" />
+                    </div>
+                    <div id='garota-3d'>
+                        <img src="images/garota_3d.png" border="0" width="603" height="702" />
+                    </div>
+                </div>
+                <div id='box_3d'>
+                    <div id='box_3d_off'>
+                        <a href="#" class="bt_box_3d_on"><img src="images/bt_box_slider_on.png" /></a>
+                    </div>
+                    <div id='box_3d_on' class="hide">
+                        <a href="#" class="bt_box_3d_off"><img src="images/bt_box_slider_off.png" /></a>
+                    </div>
+                </div>
+            </div>
+            <div id="slide4">
+                <div id='elementos-crash'>
+                    <div id='logo-crash'>
+                        <img src="images/logo_crash.png" border="0" width="311" height="138" />
+                    </div>
+                    <div id='esmalte-crash'>
+                        <img src="images/esmaltes_crash.png" border="0" width="306" height="331" />
+                    </div>
+                    <div id='garota-crash'>
+                        <img src="images/garota_crash.png" border="0" width="662" height="707" />
+                    </div>
+                </div>
+                <div id='box_crash'>
+                    <div id='box_crash_off'>
+                        <a href="#" class="bt_box_crash_on"><img src="images/bt_box_slider_on.png" /></a>
+                    </div>
+                    <div id='box_crash_on' class="hide">
+                        <a href="#" class="bt_box_crash_off"><img src="images/bt_box_slider_off.png" /></a>
+                    </div>
+                </div>
+            </div>
+            <div id="slide5">
+                <div id='elementos-oneftwo'>
+                    <div id='logo-oneftwo'>
+                        <img src="images/logo_oneftwo.png" border="0" width="117" height="193" />
+                    </div>
+                </div>
+                <div id='box_oneftwo'>
+                    <div id='box_oneftwo_off'>
+                        <a href="#" class="bt_box_oneftwo_on"><img src="images/bt_box_slider_on.png" /></a>
+                    </div>
+                    <div id='box_oneftwo_on' class="hide">
+                        <a href="#" class="bt_box_oneftwo_off"><img src="images/bt_box_slider_off.png" /></a>
+                    </div>
+                </div>
+            </div>
+            <div id="slide6">
+                <div id='elementos-basica'>
+                    <div id='logo-basica'>
+                        <img src="images/logo_basica.png" border="0" width="248" height="113" />
+                    </div>
+                    <div id='esmalte-basica'>
+                        <img src="images/esmaltes_basica.png" border="0" width="276" height="301" />
+                    </div>
+                    <div id='garota-basica'>
+                        <img src="images/garota_basica.png" border="0" width="575" height="699" />
+                    </div>
+                </div>
+                <div id='box_basica'>
+                    <div id='box_basica_off'>
+                        <a href="#" class="bt_box_basica_on"><img src="images/bt_box_slider_on.png" /></a>
+                    </div>
+                    <div id='box_basica_on' class="hide">
+                        <a href="#" class="bt_box_basica_off"><img src="images/bt_box_slider_off.png" /></a>
+                    </div>
+                </div>
+            </div>
+            <div id="slide7">
+                <div id='elementos-sensitive'>
+                    <div id='logo-sensitive'>
+                        <img src="images/logo_sensitive.png" border="0" width="208" height="81" />
+                    </div>
+                    <div id='esmalte-sensitive'>
+                        <img src="images/esmaltes_sensitive.png" border="0" width="288" height="279" />
+                    </div>
+                    <div id='garota-sensitive'>
+                        <img src="images/garota_sensitive.png" border="0" width="664" height="699" />
+                    </div>
+                </div>
+                <div id='box_sensitive'>
+                    <div id='box_sensitive_off'>
+                        <a href="#" class="bt_box_sensitive_on"><img src="images/bt_box_slider_on.png" /></a>
+                    </div>
+                    <div id='box_sensitive_on' class="hide">
+                        <a href="#" class="bt_box_sensitive_off"><img src="images/bt_box_slider_off.png" /></a>
+                    </div>
+                </div>
+            </div>
+            <div id="slide8">
+                <div id='elementos-adriane'>
+                    <div id='logo-adriane'>
+                        <img src="images/logo_adriane.png" border="0" width="357" height="57" />
+                    </div>
+                </div>
+                <div id='box_adriane'>
+                    <div id='box_adriane_off'>
+                        <a href="#" class="bt_box_adriane_on"><img src="images/bt_box_slider_on.png" /></a>
+                    </div>
+                    <div id='box_adriane_on' class="hide">
+                        <a href="#" class="bt_box_adriane_off"><img src="images/bt_box_slider_off.png" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id='nav_control'>
+        	<div id='nav'></div>
+        </div>
+    </div>
+    <div id='article'>
+    	<div id='body_top'>
+        	<div id='esmalte-do-dia'>
+            	<div id='edd-top'>
+                	<img src="images/tit-esmalte-dia.png" width="178" height="35" />
+                    <h1>New York Girl</h1>
+                </div>
+                <div id='edd-body'>
+                	<div id='edd'>
+                		<img src="images/img_esmaltedia.png" width="74" height="202" />
+                	</div>
+                    <div id='edd-text'>
+                    	<h1>O esmalte de hoje é o <b>New York Girl</b>, da linha <b>Ultimate Glitter.</b></h1>
+                		<p>Todo o charme e movimento de New York são demonstrados neste esmalte.<br />
+O brilho e astral da cidade são representados pelas partículas super grandes de glitter. Para você que também quer sentir a emoção de estar na Big Apple sem precisar ir até lá.</p>
+                	</div>
+                </div>
+                <div id='edd-footer'>
+                	<img src="images/bg_redes_edd.png" width="528" height="28" />
+                </div>
+            </div>
+            <div id='vsh'>
+            	<div id='top-vsh'>
+                	<img src="images/img_vsh.png" width="262" height="42" />
+                </div>
+                <div id='body-vsh'>
+                	<a href="#"><img src="images/img_vsh_body.png" width="319" height="188" /></a>
+                </div>
+                <div id='footer-vsh'>
+                	<img src="images/bg_vsh_foooter.png" width="320" height="28" />
+                </div>
+            </div>
+        </div>
+        <div id='body_footer'>
+        	<img src="images/tit-noticias.png" width="116" height="27" /><br />
+        	<a href="noticia.html" target="_self">
+        	<div class="noticia">
+            	<div></div>
+                <p>09/03/11</p>
+                <h1>Pede sit in nibh nam, sapien lorem nonummy vestibulum malesuada.</h1>
+                <img class="footer_noticias" src="images/bg_noticias_footer.png" width="318" height="28" />
+            </div>
+            </a>
+            <a href="noticia.html" target="_self">
+        	<div class="noticia">
+            	<div></div>
+                <p>09/03/11</p>
+                <h1>Pede sit in nibh nam, sapien lorem nonummy vestibulum malesuada.</h1>
+                <img class="footer_noticias" src="images/bg_noticias_footer.png" width="318" height="28" />
+            </div>
+            </a>
+            <a href="noticia.html" target="_self">
+        	<div class="noticia">
+            	<div></div>
+                <p>09/03/11</p>
+                <h1>Pede sit in nibh nam, sapien lorem nonummy vestibulum malesuada.</h1>
+                <img class="footer_noticias" src="images/bg_noticias_footer.png" width="318" height="28" />
+            </div>
+            </a>
+        </div>
+    </div>
+    <div id='footer'>
+    	<div id='footer-top'>
+        	<div class="footer_box1" >
+            	<img src="images/tit-tbcf.png" width="194" height="21" />
+                <p>R. Dr. Waldomiro Franco da Silveira, 450.</p>
+                <p>Recreio Estoril</p>
+                <p>Atibaia</p>
+                <p>São Paulo</p>
+                <p>T. 11 4413.4830 / 11 4402.2552</p>
+            </div>
+            <div class="footer_box2" >
+            	<img src="images/tit-produtos.png" width="74" height="15" />
+                <p><a href="produto_interna.html">Linha Básica</a></p>
+                <p><a href="produto_interna.html">142</a></p>
+                <p><a href="produto_interna.html">Linha Cuidados</a></p>
+                <p><a href="produto_interna.html">Crash</a></p>
+                <p><a href="produto_interna.html">Nature Trati</a></p>
+                <p><a href="produto_interna.html">Sensitive</a></p>
+                <p><a href="produto_interna.html">Ultimate 3D</a></p>
+                <p><a href="produto_interna.html">Ultimate Glitter</a></p>
+                <p><a href="produto_interna.html">Glitter</a></p>
+            </div>
+            <div class="footer_box2" >
+            	<img src="images/tit-top-beauty.png" width="94" height="19" />
+                <p><a href="empresa.html">Missão, Visão e Valores</a></p>
+            </div>
+            <div class="footer_box3" >
+            	<img src="images/tit-cadastrese.png" width="98" height="15" />
+                <p>Para receber nossa newsletter!</p>
+                <form>
+                	
+                </form>
+            </div>
+        </div>
+        <div id='footer-footer'>
+        	<a href="trabalhe_conosco.html" class="various fancybox.iframe"><img src="images/bt_trabalhe_conosco.png" width="135" height="20" /></a>
+            <a href="politica.html"><img src="images/bt_politica_privacidade.png" width="167" height="20" /></a>
+            <a href="termos.html"><img src="images/bt_termos_uso.png" width="117" height="20" /></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

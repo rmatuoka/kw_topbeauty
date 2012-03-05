@@ -1,0 +1,66 @@
+#article{
+	background-image:url('../images/bg_internas.jpg') !important;
+	top:0px !important;
+	}
+
+#interna{
+	width:970px;
+	margin:0 auto;
+	}
+
+#int-esquerda{
+	width:620px;
+	float:left;
+	text-align:left;
+	margin-top:300px;
+	}
+
+#int-direita{
+	width:319px;
+	float:right;
+	margin-top:200px;
+	text-align:left;
+	}
+
+#int-dica{
+	
+	}
+	
+#int-dica img{
+	margin-bottom:5px;
+	}
+	
+#int-vsh{
+	margin-top:20px;
+	}
+	
+#int-vsh img{
+	margin-bottom:5px;
+	}
+
+#int-esquerda h1{
+	font-family: 'AkkoRoundedStd-Light';
+	color:#9f5284;
+	font-size:25px;
+	margin-bottom:20px;
+	}
+
+#int-esquerda h2{
+	font-family: Arial, Helvetica, sans-serif;
+	color:#808080;
+	font-size:12px;
+	margin-bottom:20px;
+	margin-top:-20px;
+	}
+
+#int-esquerda p{
+	font-family: 'Radley';
+	color:#808080;
+	font-weight:normal;
+	font-size:15px;
+	margin-bottom:20px;
+	}
+
+.vermaisnoticias{
+	float:right;
+	}

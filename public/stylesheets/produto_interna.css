@@ -1,0 +1,76 @@
+#int-produto{
+	margin-top:240px;
+	text-align:left;
+	width:800px;
+	float:right;
+	}
+
+#int-produto h1{
+	font-family: 'AkkoRoundedStd-Light';
+	color:#9f5284;
+	font-size:25px;
+	margin-bottom:5px;
+	}
+
+#int-produto h3{
+	font-family: 'AkkoRoundedStd-Light';
+	color:#b99aae;
+	font-size:20px;
+	margin-bottom:10px;
+	}
+
+#int-produto p{
+	font-family: 'Radley';
+	color:#808080;
+	font-size:15px;
+	margin-bottom:10px;
+	}
+
+#prod-esquerda{
+	width:200px;
+	float:left;
+	margin-top:30px;
+	}
+
+#img-produto{
+	background-image:url('../images/bg_produto.png');
+	background-position:center top;
+	background-repeat:no-repeat;
+	width:200px;
+	height:286px;
+	text-align:center;
+	}
+
+#img-produto img{
+	margin-top:10px;
+	}
+
+#prod-direita{
+	width:560px;
+	float:right;
+	border-left:1px solid #b99aae;
+	padding-left:20px;
+	margin-top:30px;
+	}
+
+#prod-direita h2{
+	font-family: 'AkkoRoundedStd-Light';
+	color:#9f5284;
+	font-size:20px;
+	margin-bottom:10px;
+	}
+
+#prod-direita p{
+	margin-bottom:20px;
+	}
+
+#prod-direita table{
+	margin-top:20px;
+	margin-bottom:20px;
+	}
+
+
+
+#footer{
+	top:1000px;
+	}

@@ -1,0 +1,51 @@
+#int-esquerda{
+	
+	}
+
+#int-esquerda p{
+	font-family: Arial, Helvetica, sans-serif !important;
+	color:#808080 !important;
+	font-size:15px !important;
+	margin-bottom:5px !important;
+	}
+	
+#int-esquerda p b{
+	color:#9f5284  !important;
+	}
+
+#form_local{
+	margin-top:20px;
+	}
+
+#ond_um{
+	background-image:url('../images/bg_ondeencontrar.png');
+	background-position:center top;
+	background-repeat:no-repeat;
+	width:635px;
+	height:86px;
+	margin:0 auto;
+	margin-top:10px;
+	padding-top:10px;
+	}
+	
+#ond_dois{
+	width:635px;
+	height:86px;
+	margin:0 auto;
+	margin-top:10px;
+	padding-top:10px;
+	}
+
+.onde h3{
+	font-family: 'AkkoRoundedStd-Light';
+	color:#b99aae;
+	font-size:20px;
+	margin-left:10px;
+	}
+
+.onde p{
+	font-family: Verdana, Geneva, sans-serif !important;
+	color:#808080 !important;
+	font-size:15px !important;
+	margin-left:10px;
+	}

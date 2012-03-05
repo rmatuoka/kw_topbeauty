@@ -1,5 +1,13 @@
 KwTopbeauty::Application.routes.draw do
 
+  get "noticias/index"
+
+  get "noticias/show"
+  
+  resources :produtos
+  resources :t_conosco
+  resources :contato
+  resources :home
   resources :user_sessions
   resources :users
   resources :password_resets
@@ -21,10 +29,14 @@ KwTopbeauty::Application.routes.draw do
   }
   #Final do namespace Admin
   
-  root :to => "user_sessions#new"
+  root :to => "home#index"
   match 'cadastro' => "users#new"
   match 'login' => 'user_sessions#new'  
-  match 'logout' => 'user_sessions#destroy'  
+  match 'logout' => 'user_sessions#destroy' 
+  match 'empresa' => "static_contents#empresa" 
+  match 'onde_encontrar' => "static_contents#onde_encontrar" 
+  match 'politica_de_privacidade' => "static_contents#politica_de_privacidade" 
+  match 'termos_de_uso' => "static_contents#termos_de_uso" 
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

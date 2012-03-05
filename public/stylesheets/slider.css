@@ -1,0 +1,410 @@
+#elementos-nature{
+	position:absolute;
+	width:960px;
+	left:50%;
+    margin-left:-480px;
+	z-index:1000;
+	}
+
+#box_nature{
+	position:absolute;
+	width:960px;
+	height:690px;
+	left:50%;
+    margin-left:-480px;
+	z-index:2000;
+	}
+
+#box_nature_off{
+	background-image:url('../images/bg_box_slider_off.png');
+	background-position:center top;
+	background-repeat:no-repeat;
+	width:335px;
+	height:96px;
+	position:absolute;
+	right:0px;
+	bottom:0px;
+	}
+	
+#box_nature_on{
+	background-image:url('../images/bg_box_slider_on.png');
+	background-position:center top;
+	background-repeat:no-repeat;
+	width:335px;
+	height:327px;
+	position:absolute;
+	right:0px;
+	bottom:0px;
+	}
+	
+#logo-nature{
+	float:left;
+	margin-top:155px;
+	margin-left:240px;
+	}
+
+#esmalte-nature{
+	float:left;
+	margin-top:80px;
+	margin-left:90px;
+	}
+
+#garota-nature{
+	float:right;
+	margin-top:-602px;
+	margin-right:-350px;
+	}
+
+#elementos-glitter{
+	width:960px;
+	margin:0 auto;
+	}
+	
+#box_glitter{
+	position:absolute;
+	width:960px;
+	height:690px;
+	left:50%;
+    margin-left:-480px;
+	z-index:2000;
+	}
+
+#box_glitter_off{
+	background-image:url('../images/bg_box_slider_off.png');
+	background-position:center top;
+	background-repeat:no-repeat;
+	width:335px;
+	height:96px;
+	position:absolute;
+	right:0px;
+	bottom:0px;
+	}
+	
+#box_glitter_on{
+	background-image:url('../images/bg_box_slider_on.png');
+	background-position:center top;
+	background-repeat:no-repeat;
+	width:335px;
+	height:327px;
+	position:absolute;
+	right:0px;
+	bottom:0px;
+	}
+	
+#logo-glitter{
+	float:left;
+	margin-top:125px;
+	margin-left:130px;
+	}
+
+#esmalte-glitter{
+	float:left;
+	margin-top:0px;
+	margin-left:130px;
+	}
+
+#garota-glitter{
+	float:right;
+	margin-top:-232px;
+	margin-right:-150px;
+	}
+
+#elementos-3d{
+	width:960px;
+	margin:0 auto;
+	}
+
+#box_3d{
+	position:absolute;
+	width:960px;
+	height:690px;
+	left:50%;
+    margin-left:-480px;
+	z-index:2000;
+	}
+
+#box_3d_off{
+	background-image:url('../images/bg_box_slider_off.png');
+	background-position:center top;
+	background-repeat:no-repeat;
+	width:335px;
+	height:96px;
+	position:absolute;
+	right:0px;
+	bottom:0px;
+	}
+	
+#box_3d_on{
+	background-image:url('../images/bg_box_slider_on.png');
+	background-position:center top;
+	background-repeat:no-repeat;
+	width:335px;
+	height:327px;
+	position:absolute;
+	right:0px;
+	bottom:0px;
+	}
+	
+#logo-3d{
+	float:left;
+	margin-top:80px;
+	margin-left:350px;
+	}
+
+#esmalte-3d{
+	float:left;
+	margin-top:-150px;
+	margin-left:0px;
+	}
+
+#garota-3d{
+	float:right;
+	margin-top:-415px;
+	margin-right:-150px;
+	}
+
+#elementos-crash{
+	width:960px;
+	margin:0 auto;
+	}
+
+#box_crash{
+	position:absolute;
+	width:960px;
+	height:690px;
+	left:50%;
+    margin-left:-480px;
+	z-index:2000;
+	}
+
+#box_crash_off{
+	background-image:url('../images/bg_box_slider_off.png');
+	background-position:center top;
+	background-repeat:no-repeat;
+	width:335px;
+	height:96px;
+	position:absolute;
+	right:0px;
+	bottom:0px;
+	}
+	
+#box_crash_on{
+	background-image:url('../images/bg_box_slider_on.png');
+	background-position:center top;
+	background-repeat:no-repeat;
+	width:335px;
+	height:327px;
+	position:absolute;
+	right:0px;
+	bottom:0px;
+	}
+	
+#logo-crash{
+	float:left;
+	margin-top:100px;
+	margin-left:250px;
+	}
+
+#esmalte-crash{
+	float:left;
+	margin-top:70px;
+	margin-left:130px;
+	}
+
+#garota-crash{
+	float:right;
+	margin-top:-260px;
+	margin-right:-150px;
+	}
+	
+#elementos-oneftwo{
+	width:960px;
+	margin:0 auto;
+	}
+
+#box_oneftwo{
+	position:absolute;
+	width:960px;
+	height:690px;
+	left:50%;
+    margin-left:-480px;
+	z-index:2000;
+	}
+
+#box_oneftwo_off{
+	background-image:url('../images/bg_box_slider_off.png');
+	background-position:center top;
+	background-repeat:no-repeat;
+	width:335px;
+	height:96px;
+	position:absolute;
+	right:0px;
+	bottom:0px;
+	}
+	
+#box_oneftwo_on{
+	background-image:url('../images/bg_box_slider_on.png');
+	background-position:center top;
+	background-repeat:no-repeat;
+	width:335px;
+	height:327px;
+	position:absolute;
+	right:0px;
+	bottom:0px;
+	}
+	
+#logo-oneftwo{
+	float:left;
+	margin-top:450px;
+	margin-left:400px;
+	}
+
+#elementos-basica{
+	width:960px;
+	margin:0 auto;
+	}
+
+#box_basica{
+	position:absolute;
+	width:960px;
+	height:690px;
+	left:50%;
+    margin-left:-480px;
+	z-index:2000;
+	}
+
+#box_basica_off{
+	background-image:url('../images/bg_box_slider_off.png');
+	background-position:center top;
+	background-repeat:no-repeat;
+	width:335px;
+	height:96px;
+	position:absolute;
+	right:0px;
+	bottom:0px;
+	}
+	
+#box_basica_on{
+	background-image:url('../images/bg_box_slider_on.png');
+	background-position:center top;
+	background-repeat:no-repeat;
+	width:335px;
+	height:327px;
+	position:absolute;
+	right:0px;
+	bottom:0px;
+	}
+	
+#logo-basica{
+	float:left;
+	margin-top:150px;
+	margin-left:220px;
+	}
+
+#esmalte-basica{
+	float:left;
+	margin-top:320px;
+	margin-left:-350px;
+	}
+
+#garota-basica{
+	float:right;
+	margin-top:10px;
+	margin-right:-150px;
+	}
+
+#elementos-sensitive{
+	width:960px;
+	margin:0 auto;
+	}
+
+#box_sensitive{
+	position:absolute;
+	width:960px;
+	height:690px;
+	left:50%;
+    margin-left:-480px;
+	z-index:2000;
+	}
+
+#box_sensitive_off{
+	background-image:url('../images/bg_box_slider_off.png');
+	background-position:center top;
+	background-repeat:no-repeat;
+	width:335px;
+	height:96px;
+	position:absolute;
+	right:0px;
+	bottom:0px;
+	}
+	
+#box_sensitive_on{
+	background-image:url('../images/bg_box_slider_on.png');
+	background-position:center top;
+	background-repeat:no-repeat;
+	width:335px;
+	height:327px;
+	position:absolute;
+	right:0px;
+	bottom:0px;
+	}
+	
+#logo-sensitive{
+	float:left;
+	margin-top:150px;
+	margin-left:220px;
+	}
+
+#esmalte-sensitive{
+	float:left;
+	margin-top:320px;
+	margin-left:-350px;
+	}
+
+#garota-sensitive{
+	float:right;
+	margin-top:10px;
+	margin-right:-150px;
+	}
+
+#elementos-adriane{
+	width:960px;
+	margin:0 auto;
+	}
+
+#box_adriane{
+	position:absolute;
+	width:960px;
+	height:690px;
+	left:50%;
+    margin-left:-480px;
+	z-index:2000;
+	}
+
+#box_adriane_off{
+	background-image:url('../images/bg_box_slider_off.png');
+	background-position:center top;
+	background-repeat:no-repeat;
+	width:335px;
+	height:96px;
+	position:absolute;
+	right:0px;
+	bottom:0px;
+	}
+	
+#box_adriane_on{
+	background-image:url('../images/bg_box_slider_on.png');
+	background-position:center top;
+	background-repeat:no-repeat;
+	width:335px;
+	height:327px;
+	position:absolute;
+	right:0px;
+	bottom:0px;
+	}
+	
+#logo-adriane{
+	float:left;
+	margin-top:150px;
+	margin-left:180px;
+	}

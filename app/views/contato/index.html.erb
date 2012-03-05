@@ -1,0 +1,106 @@
+<%content_for :head do%>
+<%=javascript_include_tag  "fancybox/jquery.fancybox.js" %>
+<script>
+jQuery(document).ready(function() {
+	jQuery('.duvidas').click(function(){
+		jQuery('.form-duvidas').removeClass('hide');
+		jQuery('.form-comercial').addClass('hide');
+		})
+	
+	jQuery('.comercial').click(function(){
+		jQuery('.form-comercial').removeClass('hide');
+		jQuery('.form-duvidas').addClass('hide');
+		})
+});
+</script>
+<%end%>
+<div id='form_esquerda'>
+	<img src="images/img_contato.png" width="248" height="175" style="margin-right:20px; " /><br />
+	<img src="images/bt_duvidasesugestoes.png" width="240" height="38" style="margin-bottom:5px; margin-top:20px; cursor:pointer;" class="duvidas" /><br />
+	<img src="images/bt_comercial.png" width="240" height="38" style="cursor:pointer;" class="comercial" />
+</div>
+<div id='form_direita'>
+
+	<form class="form-duvidas hide">
+				<table width="460" border="0" cellspacing="0" cellpadding="0">
+				  <tr>
+					<td><img src="images/lb_nome_completo.png" width="105" height="14" /></td>
+				  </tr>
+				  <tr>
+					<td><input name="" type="text" class="input" /></td>
+				  </tr>
+				  <tr>
+					<td><img src="images/lb_email.png" width="44" height="11" /></td>
+				  </tr>
+				  <tr>
+					<td><input name="" type="text" class="input" /></td>
+				  </tr>
+				  <tr>
+					<td><img src="images/lb_empresa.png" width="58" height="14" /></td>
+				  </tr>
+				  <tr>
+					<td><input name="" type="text" class="input" /></td>
+				  </tr>
+				  <tr>
+					<td><img src="images/lb_telefone.png" width="60" height="11" /></td>
+				  </tr>
+				  <tr>
+					<td><input name="" type="text" class="input" /></td>
+				  </tr>
+				  <tr>
+					<td><img src="images/lb_mensagem.png" width="73" height="14" /></td>
+				  </tr>
+				  <tr>
+					<td><textarea name="" cols="" rows=""></textarea></td>
+				  </tr>
+				  <tr>
+					<td valign="bottom"><input type="checkbox"  />
+					<img src="images/lb_desejo_receber.png" width="268" height="15" style="vertical-align:top !important; margin-top:4px;" /></td>
+				  </tr>
+				  <tr>
+					<td><input name="" type="button" class="botao" /></td>
+				  </tr>
+				</table>
+			</form>
+			<form class="form-comercial hide">
+				<table width="460" border="0" cellspacing="0" cellpadding="0">
+				  <tr>
+					<td><img src="images/lb_nome_completo.png" width="105" height="14" /></td>
+				  </tr>
+				  <tr>
+					<td><input name="" type="text" class="input" /></td>
+				  </tr>
+				  <tr>
+					<td><img src="images/lb_email.png" width="44" height="11" /></td>
+				  </tr>
+				  <tr>
+					<td><input name="" type="text" class="input" /></td>
+				  </tr>
+				  <tr>
+					<td><img src="images/lb_empresa.png" width="58" height="14" /></td>
+				  </tr>
+				  <tr>
+					<td><input name="" type="text" class="input" /></td>
+				  </tr>
+				  <tr>
+					<td><img src="images/lb_telefone.png" width="60" height="11" /></td>
+				  </tr>
+				  <tr>
+					<td><input name="" type="text" class="input" /></td>
+				  </tr>
+				  <tr>
+					<td><img src="images/lb_mensagem.png" width="73" height="14" /></td>
+				  </tr>
+				  <tr>
+					<td><textarea name="" cols="" rows=""></textarea></td>
+				  </tr>
+				  <tr>
+					<td valign="bottom"><input type="checkbox"  />
+					<img src="images/lb_desejo_receber.png" width="268" height="15" style="vertical-align:top !important; margin-top:4px;" /></td>
+				  </tr>
+				  <tr>
+					<td><input name="" type="button" class="botao" /></td>
+				  </tr>
+				</table>
+			</form>
+</div>			
