@@ -1,2 +1,13 @@
-<h1>Noticias#show</h1>
-<p>Find me in app/views/noticias/show.html.erb</p>
+﻿<%title "Notícia" %>
+<%content_for :head do%>
+<%= stylesheet_link_tag "internal.css" %>
+<%end%>
+<div id='int-esquerda'>
+	<h1><%= @noticia.sumary %></h1>
+	<h2><%= @noticia.created_at.strftime('%d/%m/%Y')%></h2>
+	<%= (image_tag(@noticia.imagehead.url(:medium), :style=>"margin-bottom:20px;"))if !(@noticia.imagehead.url == "/imageheads/original/missing.png") %>
+	<br />
+	<%= raw @noticia.description%>
+	<br />
+	<%= link_to image_tag("bt_vermaisnoticias.png", :width=>"188", :height=>"26"), noticias_path, :class=>"vermaisnoticias" %>
+</div>

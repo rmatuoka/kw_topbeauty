@@ -333,7 +333,6 @@ body{
 	text-decoration:none;
 	float:left;
 	}
-
 .noticia{
 	background-image:url('../images/bg_noticias.png');
 	background-position:center top;
@@ -353,6 +352,9 @@ body{
 	background-image:url('../images/img_noticias_um.png');
 	background-position:center top;
 	background-repeat:no-repeat;
+	}
+.noticia:hover div{
+	background-image:url('../images/img_noticias_um_hover.png');
 	}
 
 .noticia h1{
@@ -385,14 +387,11 @@ body{
 	color:#808080;
 	}
 
-.noticia:hover div{
-	background-image:url('../images/img_noticias_um_hover.png');
-	}
+
 
 .footer_noticias{
 	margin-top:45px !important;
 	}
-	
 #footer{
 	background-image:url('../images/bg_footer.jpg');
 	background-position:center top;

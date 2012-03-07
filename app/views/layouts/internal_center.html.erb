@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -9,11 +9,11 @@ jQuery.noConflict();
 </script>
 <%=stylesheet_link_tag "reset.css" %>
 <%=stylesheet_link_tag "geral.css" %>
+<%=stylesheet_link_tag "internal.css" %>
 <%=stylesheet_link_tag "../javascripts/fancybox/jquery.fancybox.css" %>
 <%=javascript_include_tag  "jcycle.js" %>
 <%=javascript_include_tag  "easing.js" %>
 <%=javascript_include_tag  "fancybox/jquery.fancybox.js" %>
-<%= yield :head %>
 <script>
 jQuery(document).ready(function() {
 	jQuery(".fancybox").fancybox();
@@ -29,19 +29,14 @@ jQuery(document).ready(function() {
 		closeEffect	: 'none'
 	});
 });
-
 </script>
+<%= yield :head %>
 </head>
 <body>
 <div id='section'>
 	<%= render :file =>"layouts/_header.html.erb" %>
-    <div id='article'>
-    	<div id='interna'>
-			<%= yield %>
-			<%= render :file =>"layouts/_intright.html.erb" %>
-        </div>
-    </div>
-	<%= render :file =>"layouts/_footer.html.erb" %>
+	<%= yield %>
+    <%= render :file =>"layouts/_footer.html.erb" %>
 </div>
 </body>
 </html>

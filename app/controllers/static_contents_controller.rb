@@ -1,5 +1,5 @@
 class StaticContentsController < ApplicationController
-layout "internal"
+
   def empresa
 	
   end

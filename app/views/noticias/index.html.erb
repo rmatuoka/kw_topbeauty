@@ -1,2 +1,57 @@
-<h1>Noticias#index</h1>
-<p>Find me in app/views/noticias/index.html.erb</p>
+﻿<%title "Notícias" %>
+<%content_for :head do%>
+	<%= stylesheet_link_tag "noticias.css" %>
+	<script>
+	jQuery(function() {
+		jQuery("a.Swap")
+			.mouseover(function() { 
+				var src = jQuery(this).find(".Swapimg").attr("src").replace("mediumpb/", "medium/");
+			jQuery(this).find(".Swapimg").attr("src", src);
+			})
+			.mouseout(function() {
+				var src = jQuery(this).find(".Swapimg").attr("src").replace("medium/", "mediumpb/");
+				jQuery(this).find(".Swapimg").attr("src", src);
+			});
+	});
+	</script>
+<%end%>
+
+<%
+$div =0
+$contador =0
+ %>
+<div id='article-noticias'> 
+	<div id='body_footer'>
+	<%@noticias.each do|noticiashow|%>
+		<% if $contador != 2 %>
+			<a href="<%= noticia_path(noticiashow)%>" target="_self" class="Swap">
+			<div class="noticia" <%=raw 'style=" margin-top:50px;"' if ($div > 2)%>>
+				<div><%= image_tag noticiashow.image.url(:mediumpb), :class=>"Swapimg" %></div>
+				<p><%= noticiashow.created_at.strftime('%d/%m/%Y')%></p>
+				<h1><%= strip_tags(noticiashow.description.slice(0,70))%></h1>
+				<span class="footer_noticias"><img src="images/bg_noticias_footer.png" width="318" height="28"></span>				
+			</div>
+			</a>
+		<%  $contador = $contador +1
+			$div = $div +1
+			else %>
+			<a href="<%= noticia_path(noticiashow)%>" target="_self" class="Swap">
+			<div class="noticia" <%=raw 'style=" margin-top:50px;"' if $div > 2%>>
+				<div><%= image_tag noticiashow.image.url(:mediumpb), :class=>"Swapimg" %></div>
+				<p><%= noticiashow.created_at.strftime('%d/%m/%Y')%></p>
+				<h1><%= strip_tags(noticiashow.description.slice(0,70))%></h1>
+				<span class="footer_noticias"><img src="images/bg_noticias_footer.png" width="318" height="28"></span>
+			</div>
+			</a>
+		</div>
+		<div id='body_footer'>
+		<%  $contador = 0
+			$div = $div +1
+			end 
+		%>
+			
+	<% end %>
+		</div>
+
+	</div>
+</div>

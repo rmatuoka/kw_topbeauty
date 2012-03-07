@@ -15,7 +15,9 @@
 
   </p>
  <br /> 
-  <%= f.file_field :image %>
+  <p><%= f.label :description ,"Imagem do Produto" %><%= f.file_field :image %></p>
+ <br />   
+  <p><%= f.label :description ,"Imagem Cabeçalho" %><%= f.file_field :imagehead %></p>
   <br /> 
   <br />
   <p><%= submit_tag "Voltar",:type=>"button",:onclick=>"window.open('"+admin_posts_path+"','_self');", :class => "Bt_enviar", :style=>"margin-right: 5px;"%> <%= f.submit "Salvar", :class => "Bt_enviar" %></p>

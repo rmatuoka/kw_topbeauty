@@ -1,9 +1,6 @@
 KwTopbeauty::Application.routes.draw do
 
-  get "noticias/index"
-
-  get "noticias/show"
-  
+  resources :noticias
   resources :produtos
   resources :t_conosco
   resources :contato
