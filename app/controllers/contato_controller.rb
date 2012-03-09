@@ -9,8 +9,12 @@ layout "fancybox"
     @contato = Contact.new(params[:contact])
 	if (@contato.contact_type == "1".to_i || @contato.contact_type == "2".to_i)
 		if @contato.save
-		  flash[:notice] = "Criado com sucesso."
+		  flash[:notice] = "Enviado com sucesso."
 		  redirect_to :action => 'index' 
+		  
+		  #ENVIA O EMAIL
+		  
+		  UserMailer.contact(@contato).deliver
 		else
 		  render :action => 'index'
 		end

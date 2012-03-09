@@ -1,14 +1,14 @@
 class UserMailer < ActionMailer::Base
-  default :from => "TESTE DE EMAIL<teste@korewa.com.br>"
+  default :from => "TESTE DE EMAIL <cnascimento@korewa.com.br>"
   
-  def send_email_password_reset(user)
-    @user = user
-		mail(:to => user.email, :subject => "Instruções para trocar a senha")
-	end
-  def contato_duvidas_comercial
-	
+  def contact (contato)
+      @contact= contato
+      mail(:to => "cnascimento@korewa.com.br",:bcc => "cnascimento@korewa.com.br", :subject => "teste top beauty")	
   end
-  def trabalhe_conosco
-	
+  
+  def t_conosco(contato)
+      @contact= contato 
+	  attachments[@contact.curriculum_file_name] = File.read(@contact.curriculum.path) 
+      mail(:to => "cnascimento@korewa.com.br",:bcc => "cnascimento@korewa.com.br", :subject => "teste top beauty")
   end	
 end

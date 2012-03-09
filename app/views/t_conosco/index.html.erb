@@ -1,51 +1,84 @@
-<%content_for :head do%>
-<%=javascript_include_tag  "fancybox/jquery.fancybox.js" %>
+﻿<%content_for :head do%>
+	<%=javascript_include_tag  "fancybox/jquery.fancybox.js" %>
+	<%=javascript_include_tag  "jquery.validate.min.js" %>
+	<%=javascript_include_tag  "meusmetodos.js" %>
 <script>
-<script>
-jQuery(document).ready(function() {
+	jQuery(document).ready(function(){
+			jQuery('#form_direita').validate({
 
-});
+			rules: {
+				"contact[name]": {
+					required: true,
+					minlength: 2
+				},
+				"contact[email]": {
+					required: true,
+					email: true
+				},			
+				"contact[message]": {
+					required: true
+				},
+				"contact[phone]": {
+					required: true
+				}
+			},
+			messages: {
+				"contact[name]": {
+					required: "Preencha o seu nome completo!",
+					minlength: "Minimo de dois caracteres!"
+				},
+				"contact[email]": {
+					required: "Preencha seu e-mail de contato",
+					email: "Formato de email inválido"
+				},
+				"contact[company]": "Digite o Nome da  Empresa",
+				"contact[message]": "Preencha o campo com sua mensagem ",
+			    "contact[phone]": "Preencha o seu telefone com sua mensagem "
+			}
+		});
+	});
 </script>
 <%end%>
 <div id='form_esquerda'>
 	<img src="images/img_trabalhe_conosco.png" width="251" height="295" style="margin-right:20px; " /><br />
 </div>
-<div id='form_direita'>
-	<form class="form-duvidas">
-		<table width="460" border="0" cellspacing="0" cellpadding="0">
+<%= raw ("<div id='form_show_msg' >" + flash[:notice] + "</div>") if !flash[:notice].blank?%>
+
+<%= form_for @contato, :url=>"t_conosco", :html=>{:id=>"form_direita",:multipart => true} do |f| %>
+		<table width="460" border="0" cellspacing="0" cellpadding="0" <%= "class='hide'" if !flash[:notice].blank?%>>
 		  <tr>
 			<td><img src="images/lb_nome_completo.png" width="105" height="14" /></td>
 		  </tr>
 		  <tr>
-			<td><input name="" type="text" class="input" /></td>
+			<td><%=f.text_field :name , :class=>"input" %></td>
 		  </tr>
 		  <tr>
 			<td><img src="images/lb_email.png" width="44" height="11" /></td>
 		  </tr>
 		  <tr>
-			<td><input name="" type="text" class="input" /></td>
+			<td><%=f.text_field :email , :class=>"input" %></td>
 		  </tr>
 		  <tr>
 			<td><img src="images/lb_curriculum.png" width="108" height="11" /></td>
 		  </tr>
 		  <tr>
-			<td><input name="" type="text" class="input" /></td>
+			<td><%= f.file_field :curriculum %><br /><br /></td>
 		  </tr>
 		  <tr>
 			<td><img src="images/lb_telefone.png" width="60" height="11" /></td>
 		  </tr>
 		  <tr>
-			<td><input name="" type="text" class="input" /></td>
+			<td><%=f.text_field :phone , :class=>"input" %></td>
 		  </tr>
 		  <tr>
 			<td><img src="images/lb_mensagem.png" width="73" height="14" /></td>
 		  </tr>
 		  <tr>
-			<td><textarea name="" cols="" rows=""></textarea></td>
+			<td><%=f.text_area(:message,:rows=>"10")%></td>
 		  </tr>
 		  <tr>
-			<td><input name="" type="button" class="botao" /></td>
+			<td><%=image_submit_tag("bt_enviar.png", :alt=>"Enviar", :title=>"Enviar", :class=>"botao") %></td>
 		  </tr>
 		</table>
-	</form>
+<% end %>
 </div>
