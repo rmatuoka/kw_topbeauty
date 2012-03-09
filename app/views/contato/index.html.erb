@@ -1,17 +1,59 @@
-<%content_for :head do%>
-<%=javascript_include_tag  "fancybox/jquery.fancybox.js" %>
+﻿<%content_for :head do%>
+	<%=javascript_include_tag  "fancybox/jquery.fancybox.js" %>
+	<%=javascript_include_tag  "jquery.validate.min.js" %>
+	<%=javascript_include_tag  "meusmetodos.js" %>
 <script>
 jQuery(document).ready(function() {
 	jQuery('.duvidas').click(function(){
-		jQuery('.form-duvidas').removeClass('hide');
-		jQuery('.form-comercial').addClass('hide');
+		jQuery('#form_direita').removeClass('hide');
+		jQuery('#form_show_msg').addClass('hide');
+		jQuery('#contact_contact_type').val('1');
 		})
-	
 	jQuery('.comercial').click(function(){
-		jQuery('.form-comercial').removeClass('hide');
-		jQuery('.form-duvidas').addClass('hide');
+		jQuery('#form_direita').removeClass('hide');
+		jQuery('#form_show_msg').addClass('hide');
+		jQuery('#contact_contact_type').val('2');
 		})
 });
+</script>
+<script>
+	jQuery(document).ready(function(){
+			jQuery('#form_direita').validate({
+
+			rules: {
+				"contact[name]": {
+					required: true,
+					minlength: 2
+				},
+				"contact[email]": {
+					required: true,
+					email: true
+				},
+				"contact[company]": {
+					required: true
+				},			
+				"contact[message]": {
+					required: true
+				},
+				"contact[phone]": {
+					required: true
+				}
+			},
+			messages: {
+				"contact[name]": {
+					required: "Preencha o seu nome completo!",
+					minlength: "Minimo de dois caracteres!"
+				},
+				"contact[email]": {
+					required: "Preencha seu e-mail de contato",
+					email: "Formato de email inválido"
+				},
+				"contact[company]": "Digite o Nome da  Empresa",
+				"contact[message]": "Preencha o campo com sua mensagem ",
+			    "contact[phone]": "Preencha o seu telefone com sua mensagem "
+			}
+		});
+	});
 </script>
 <%end%>
 <div id='form_esquerda'>
@@ -19,88 +61,50 @@ jQuery(document).ready(function() {
 	<img src="images/bt_duvidasesugestoes.png" width="240" height="38" style="margin-bottom:5px; margin-top:20px; cursor:pointer;" class="duvidas" /><br />
 	<img src="images/bt_comercial.png" width="240" height="38" style="cursor:pointer;" class="comercial" />
 </div>
-<div id='form_direita'>
-
-	<form class="form-duvidas hide">
+<%= raw ("<div id='form_show_msg' >" + flash[:notice] + "</div>") if !flash[:notice].blank?%>
+<%= form_for @contato, :url=>"contato", :html=>{:id=>"form_direita", :class=>"hide"} do |f| %>
+				<%= f.hidden_field :contact_type %>
 				<table width="460" border="0" cellspacing="0" cellpadding="0">
 				  <tr>
 					<td><img src="images/lb_nome_completo.png" width="105" height="14" /></td>
 				  </tr>
 				  <tr>
-					<td><input name="" type="text" class="input" /></td>
+					<td><%=f.text_field :name , :class=>"input" %></td>
 				  </tr>
 				  <tr>
 					<td><img src="images/lb_email.png" width="44" height="11" /></td>
 				  </tr>
 				  <tr>
-					<td><input name="" type="text" class="input" /></td>
+					<td><%=f.text_field :email , :class=>"input" %></td>
 				  </tr>
 				  <tr>
 					<td><img src="images/lb_empresa.png" width="58" height="14" /></td>
 				  </tr>
 				  <tr>
-					<td><input name="" type="text" class="input" /></td>
+					<td><%=f.text_field :company , :class=>"input" %></td>
 				  </tr>
 				  <tr>
 					<td><img src="images/lb_telefone.png" width="60" height="11" /></td>
 				  </tr>
 				  <tr>
-					<td><input name="" type="text" class="input" /></td>
+					<td><%=f.text_field :phone , :class=>"input" %></td>
 				  </tr>
 				  <tr>
 					<td><img src="images/lb_mensagem.png" width="73" height="14" /></td>
 				  </tr>
 				  <tr>
-					<td><textarea name="" cols="" rows=""></textarea></td>
+					<td><%=f.text_area(:message,:rows=>"10")%></td>
 				  </tr>
 				  <tr>
-					<td valign="bottom"><input type="checkbox"  />
+					<td valign="bottom"><%= f.check_box :receive %>
+					
 					<img src="images/lb_desejo_receber.png" width="268" height="15" style="vertical-align:top !important; margin-top:4px;" /></td>
 				  </tr>
 				  <tr>
-					<td><input name="" type="button" class="botao" /></td>
+					<td><%=image_submit_tag("bt_enviar.png", :alt=>"Enviar", :title=>"Enviar", :class=>"botao") %></td>
 				  </tr>
 				</table>
-			</form>
-			<form class="form-comercial hide">
-				<table width="460" border="0" cellspacing="0" cellpadding="0">
-				  <tr>
-					<td><img src="images/lb_nome_completo.png" width="105" height="14" /></td>
-				  </tr>
-				  <tr>
-					<td><input name="" type="text" class="input" /></td>
-				  </tr>
-				  <tr>
-					<td><img src="images/lb_email.png" width="44" height="11" /></td>
-				  </tr>
-				  <tr>
-					<td><input name="" type="text" class="input" /></td>
-				  </tr>
-				  <tr>
-					<td><img src="images/lb_empresa.png" width="58" height="14" /></td>
-				  </tr>
-				  <tr>
-					<td><input name="" type="text" class="input" /></td>
-				  </tr>
-				  <tr>
-					<td><img src="images/lb_telefone.png" width="60" height="11" /></td>
-				  </tr>
-				  <tr>
-					<td><input name="" type="text" class="input" /></td>
-				  </tr>
-				  <tr>
-					<td><img src="images/lb_mensagem.png" width="73" height="14" /></td>
-				  </tr>
-				  <tr>
-					<td><textarea name="" cols="" rows=""></textarea></td>
-				  </tr>
-				  <tr>
-					<td valign="bottom"><input type="checkbox"  />
-					<img src="images/lb_desejo_receber.png" width="268" height="15" style="vertical-align:top !important; margin-top:4px;" /></td>
-				  </tr>
-				  <tr>
-					<td><input name="" type="button" class="botao" /></td>
-				  </tr>
-				</table>
-			</form>
+<% end %>
+			
+			
 </div>			

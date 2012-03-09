@@ -5,5 +5,10 @@ class UserMailer < ActionMailer::Base
     @user = user
 		mail(:to => user.email, :subject => "Instruções para trocar a senha")
 	end
+  def contato_duvidas_comercial
 	
+  end
+  def trabalhe_conosco
+	
+  end	
 end

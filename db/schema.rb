@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120307174458) do
+ActiveRecord::Schema.define(:version => 20120308151314) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -21,6 +21,22 @@ ActiveRecord::Schema.define(:version => 20120307174458) do
     t.string   "highlights_content_type"
     t.integer  "highlights_file_size"
     t.datetime "highlights_updated_at"
+  end
+
+  create_table "contacts", :force => true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "company"
+    t.string   "phone"
+    t.text     "message"
+    t.boolean  "receive"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "curriculum_file_name"
+    t.string   "curriculum_content_type"
+    t.integer  "curriculum_file_size"
+    t.datetime "curriculum_updated_at"
+    t.integer  "contact_type"
   end
 
   create_table "posts", :force => true do |t|
