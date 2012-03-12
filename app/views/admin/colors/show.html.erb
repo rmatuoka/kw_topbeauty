@@ -1,0 +1,18 @@
+<% title "Admin/Color" %>
+
+<p>
+  <strong>Product:</strong>
+  <%= @color.product_id %>
+</p>
+<p>
+  <strong>Name:</strong>
+  <%= @color.name %>
+</p>
+<p>
+  <strong>Description:</strong>
+  <%= @color.description %>
+</p>
+
+<p>
+<p><%= submit_tag "Voltar",:type=>"button",:onclick=>"window.open('"+admin_line_category_product_colors_path(@line, @category, @product)+"','_self');", :class => "Bt_enviar", :style=>"margin-right: 5px;"%></p>
+</p>

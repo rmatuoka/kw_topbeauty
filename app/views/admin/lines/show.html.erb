@@ -1,0 +1,18 @@
+<% title @line.name %>
+
+<h1><%=@line.name%></h1><br />
+<br />
+<p>Verifique se as informações abaixo estão corretas.</p><br />
+<br />
+<p>
+  <strong>Nome:</strong>
+  <%= @line.name %>
+</p>
+<p>
+  <strong>Descrição:</strong>
+  <%= @line.description %>
+</p>
+<br />
+<br />
+<br />
+<p><%= submit_tag "Voltar",:type=>"button",:onclick=>"window.open('"+admin_lines_path+"','_self');", :class => "Bt_enviar", :style=>"margin-right: 5px;"%></p>

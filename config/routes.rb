@@ -11,8 +11,12 @@ KwTopbeauty::Application.routes.draw do
   resources :atualizar
   #Inicio do namespace Admin
   namespace(:admin){
-    resources :categories do
-	resources :products 
+    resources :lines do
+	    resources :categories do
+        resources :products do
+          resources :colors
+        end
+      end
     end
     resources :posts 
     resources :static_contents

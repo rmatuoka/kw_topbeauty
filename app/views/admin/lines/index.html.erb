@@ -1,0 +1,29 @@
+<% title  "Lista de Linhas de Produtos" %>
+
+<h1>Lista de Linhas de Produtos</h1><br />
+<p>Verifique abaixo a lista das Linhas cadastradas no sistema.</p><br />
+<br />
+<p style="text-align: right;"><%= submit_tag "+ Criar novo",:type=>"button",:onclick=>"window.open('"+new_admin_line_path+"','_self');", :class => "Bt_enviar"%> </p>
+<br />
+
+<table class="tablesorter">
+	<thead> 
+  <tr>
+    <th style="width:30%;">Nome</th>
+    <th style="width:35%;">Descrição</th>
+	<th colspan="4" style="width:35%;">Ações</th>
+  </tr>
+</thead> 
+  <tbody>
+  <% for line in @lines %>
+    <tr>
+      <td><%= line.name %></td>
+      <td><%= line.description %></td>
+      <td><%= link_to "Visualizar", [:admin, line] %></td>
+      <td><%= link_to "Editar", edit_admin_line_path(line) %></td>
+      <td><%= link_to "Excluir", [:admin, line], :confirm => 'Are you sure?', :method => :delete %></td>
+      <td><%= link_to "Categorias", admin_line_categories_path(line) %></td>
+    </tr>
+  <% end %>
+</tbody>
+</table>

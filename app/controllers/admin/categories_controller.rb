@@ -1,46 +1,53 @@
 class Admin::CategoriesController < ApplicationController
+  before_filter :load_line
+  
   access_control do
       allow :admin, :all
   end
   
   layout "inadmin"   
- def index
-    @categories = Category.all
+  
+  def index
+    @categories = @line.categories.all
   end
 
   def show
-    @category = Category.find(params[:id])
+    @category = @line.categories.find(params[:id])
   end
 
   def new
-    @category = Category.new
+    @category = @line.categories.new
   end
 
   def create
-    @category = Category.new(params[:category])
+    @category = @line.categories.build(params[:category])
     if @category.save
-      redirect_to [:admin, @category], :notice => "Successfully created category."
+      redirect_to line_category_path(@line), :notice => "Successfully created category."
     else
       render :action => 'new'
     end
   end
 
   def edit
-    @category = Category.find(params[:id])
+    @category = @line.categories.find(params[:id])
   end
 
   def update
-    @category = Category.find(params[:id])
+    @category = @line.categories.find(params[:id])
     if @category.update_attributes(params[:category])
-      redirect_to [:admin, @category], :notice  => "Successfully updated category."
+      redirect_to line_category_path(@line), :notice  => "Successfully updated category."
     else
       render :action => 'edit'
     end
   end
 
   def destroy
-    @category = Category.find(params[:id])
+    @category = @line.categories.find(params[:id])
     @category.destroy
-    redirect_to admin_categories_url, :notice => "Successfully destroyed category."
+    redirect_to line_categories_path(@line), :notice => "Successfully destroyed category."
+  end
+  
+  def load_line
+    @line = Line.find(params[:line_id])
   end
 end

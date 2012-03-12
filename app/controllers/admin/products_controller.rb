@@ -21,7 +21,7 @@ class Admin::ProductsController < ApplicationController
   def create
     @product = @category.products.build(params[:product])
     if @product.save
-      redirect_to admin_category_product_path(@category, @product), :notice => "Successfully created product."
+      redirect_to admin_line_category_product_path(@line, @category, @product), :notice => "Successfully created product."
     else
       render :action => 'new'
     end
@@ -34,7 +34,7 @@ class Admin::ProductsController < ApplicationController
   def update
     @product = @category.products.find(params[:id])
     if @product.update_attributes(params[:product])
-      redirect_to admin_category_product_path(@category, @product), :notice  => "Successfully updated product."
+      redirect_to admin_line_category_product_path(@line, @category, @product), :notice  => "Successfully updated product."
     else
       render :action => 'edit'
     end
@@ -43,9 +43,10 @@ class Admin::ProductsController < ApplicationController
   def destroy
     @product = @category.products.find(params[:id])
     @product.destroy
-    redirect_to admin_category_products_path(@category), :notice => "Successfully destroyed product."
+    redirect_to admin_line_category_products_path(@line, @category), :notice => "Successfully destroyed product."
   end
   def load_category
-    @category = Category.find(params[:category_id])
+    @line = Line.find(params[:line_id])
+    @category = @line.categories.find(params[:category_id])
   end
 end

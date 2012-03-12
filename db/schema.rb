@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120308151314) do
+ActiveRecord::Schema.define(:version => 20120312215344) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -21,6 +21,15 @@ ActiveRecord::Schema.define(:version => 20120308151314) do
     t.string   "highlights_content_type"
     t.integer  "highlights_file_size"
     t.datetime "highlights_updated_at"
+    t.integer  "line_id"
+  end
+
+  create_table "colors", :force => true do |t|
+    t.integer  "product_id"
+    t.string   "name"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "contacts", :force => true do |t|
@@ -37,6 +46,13 @@ ActiveRecord::Schema.define(:version => 20120308151314) do
     t.integer  "curriculum_file_size"
     t.datetime "curriculum_updated_at"
     t.integer  "contact_type"
+  end
+
+  create_table "lines", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "posts", :force => true do |t|

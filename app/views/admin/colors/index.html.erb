@@ -1,0 +1,28 @@
+<% title  "Lista de Cores" %>
+
+<h1>Lista de Cores</h1><br />
+<p>Verifique abaixo a lista das cores cadastradas no sistema.</p><br />
+<br />
+<p style="text-align: right;"><%= submit_tag "+ Criar novo",:type=>"button",:onclick=>"window.open('"+new_admin_line_category_product_color_path(@line, @category, @product)+"','_self');", :class => "Bt_enviar"%> </p>
+<br />
+<table cellspacing="0" class="tablesorter">
+  <thead> 
+  <tr>
+    <th style="width:30%;">Nome</th>
+    <th style="width:35%;">Descrição</th>
+    <th colspan="4" style="width:35%;">Ações</th>
+  </tr>
+  </thead> 
+  <tbody>
+  <% for color in @colors %>
+    <tr>
+		<td><%= color.product_id %></td>
+	      <td><%= color.name %></td>
+	      <td><%= color.description %></td>
+	      <td><%= link_to "Show", admin_line_category_product_color_path(@line, @category,@product, color) %></td>
+	      <td><%= link_to "Edit", edit_admin_line_category_product_color_path(@line, @category,@product, color) %></td>
+	      <td><%= link_to "Destroy", admin_line_category_product_color_path(@line, @category,@product, color), :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
