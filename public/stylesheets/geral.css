@@ -341,7 +341,8 @@ body{
 	height:315px;
 	float:left;
 	margin-right:4px;
-	text-align:left
+	text-align:left; 
+	position:relative;
 	}
 
 .noticia div{
@@ -349,14 +350,10 @@ body{
 	margin-top:5px;
 	width:304px;
 	height:169px;
-	background-image:url('../images/img_noticias_um.png');
-	background-position:center top;
-	background-repeat:no-repeat;
 	}
+.noticia div img{margin-top:0px !important; position:relative; left:0px;}
 .noticia:hover div{
-	background-image:url('../images/img_noticias_um_hover.png');
 	}
-
 .noticia h1{
 	font-family: 'Radley';
 	color:#808080;
@@ -390,7 +387,11 @@ body{
 
 
 .footer_noticias{
-	margin-top:45px !important;
+	position:absolute;
+	width:318px;
+	height:28px;
+	top:340px;
+	left:0px;
 	}
 #footer{
 	background-image:url('../images/bg_footer.jpg');
@@ -441,6 +442,7 @@ body{
 	}
 
 .footer_box3{
+
 	width:309px;
 	float:right;
 	margin-right:5px;
