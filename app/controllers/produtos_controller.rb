@@ -1,7 +1,7 @@
 class ProdutosController < ApplicationController
+  layout "internal_center", :except => :show
   def index
-	render :layout => "internal_center"
-	@produtos=Post.all
+	  @lines = Line.all
   end
 
   def show
