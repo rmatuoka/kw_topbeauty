@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120312215344) do
+ActiveRecord::Schema.define(:version => 20120312223342) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -30,6 +30,18 @@ ActiveRecord::Schema.define(:version => 20120312215344) do
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "imgpallete_file_name"
+    t.string   "imgpallete_content_type"
+    t.integer  "imgpallete_file_size"
+    t.datetime "imgpallete_updated_at"
+    t.string   "imgenamel_file_name"
+    t.string   "imgenamel_content_type"
+    t.integer  "imgenamel_file_size"
+    t.datetime "imgenamel_updated_at"
+    t.string   "imghand_file_name"
+    t.string   "imghand_content_type"
+    t.integer  "imghand_file_size"
+    t.datetime "imghand_updated_at"
   end
 
   create_table "contacts", :force => true do |t|
@@ -53,6 +65,10 @@ ActiveRecord::Schema.define(:version => 20120312215344) do
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "imgline_file_name"
+    t.string   "imgline_content_type"
+    t.integer  "imgline_file_size"
+    t.datetime "imgline_updated_at"
   end
 
   create_table "posts", :force => true do |t|

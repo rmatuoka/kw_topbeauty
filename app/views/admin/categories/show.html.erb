@@ -12,10 +12,8 @@
   <strong>Descrição:</strong>
   <%= @category.description %>
 </p>
-<%= image_tag @category.highlights.url%>
-<%= image_tag @category.highlights.url(:medium)%>
-<%= image_tag @category.highlights.url(:thumb)%>
+
 <br />
 <br />
 <br />
-<p><%= submit_tag "Voltar",:type=>"button",:onclick=>"window.open('"+admin_categories_path+"','_self');", :class => "Bt_enviar", :style=>"margin-right: 5px;"%></p>
+<p><%= submit_tag "Voltar",:type=>"button",:onclick=>"window.open('"+admin_line_categories_path(@line)+"','_self');", :class => "Bt_enviar", :style=>"margin-right: 5px;"%></p>

@@ -22,7 +22,8 @@ class Admin::CategoriesController < ApplicationController
   def create
     @category = @line.categories.build(params[:category])
     if @category.save
-      redirect_to line_category_path(@line), :notice => "Successfully created category."
+  
+      redirect_to admin_line_category_path(@line, @category), :notice => "Successfully created category."
     else
       render :action => 'new'
     end
@@ -35,7 +36,7 @@ class Admin::CategoriesController < ApplicationController
   def update
     @category = @line.categories.find(params[:id])
     if @category.update_attributes(params[:category])
-      redirect_to line_category_path(@line), :notice  => "Successfully updated category."
+      redirect_to admin_line_category_path(@line, @category), :notice  => "Successfully updated category."
     else
       render :action => 'edit'
     end
@@ -44,9 +45,8 @@ class Admin::CategoriesController < ApplicationController
   def destroy
     @category = @line.categories.find(params[:id])
     @category.destroy
-    redirect_to line_categories_path(@line), :notice => "Successfully destroyed category."
+    redirect_to admin_line_categories_path(@line), :notice => "Successfully destroyed category."
   end
-  
   def load_line
     @line = Line.find(params[:line_id])
   end

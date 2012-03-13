@@ -1,5 +1,5 @@
 <div id="Box_form">
-<%= form_for ([:admin, @line, @category,@product, @color]) do |f| %>
+<%= form_for ([:admin, @line, @category, @product, @color], :html => { :multipart => true }) do |f| %>
   <%= f.error_messages %>
   <p>
     <%= f.label :name %><br />
@@ -9,6 +9,19 @@
     <%= f.label :description %><br />
     <%= f.text_area :description %>
   </p>
+<br />
+<label>Foto do esmalte</label>
+<%= f.file_field :imgenamel %>
+<br />
+<br />
+<label>Foto da palleta</label> 
+<%= f.file_field :imgpallete %> 
+<br />
+<br />
+<label>Foto da mão com esmalte</label>
+<%= f.file_field :imghand %> 
+<br />
+<br />
   <p><%= submit_tag "Voltar",:type=>"button",:onclick=>"window.open('"+admin_line_category_product_colors_path(@line, @category, @product)+"','_self');", :class => "Bt_enviar", :style=>"margin-right: 5px;"%> <%= f.submit "Salvar", :class => "Bt_enviar" %></p>
 <% end %>
 </div>

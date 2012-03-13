@@ -12,7 +12,17 @@
   <strong>Description:</strong>
   <%= @color.description %>
 </p>
-
+<br /><br />
+<strong>Foto esmalte:</strong><br />
+<%= image_tag @color.imgenamel.url(:medium)%>
+<br /><br />
+<strong>Foto mãos:</strong><br />
+<%= image_tag @color.imghand.url(:medium)%>
+<br /><br />
+<strong>Foto cores:</strong><br />
+<%= image_tag @color.imgpallete.url(:medium)%>
+<br />
+<br />
 <p>
 <p><%= submit_tag "Voltar",:type=>"button",:onclick=>"window.open('"+admin_line_category_product_colors_path(@line, @category, @product)+"','_self');", :class => "Bt_enviar", :style=>"margin-right: 5px;"%></p>
 </p>
