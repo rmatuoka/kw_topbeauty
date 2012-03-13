@@ -91,6 +91,7 @@ body{
 #contato{
 	float:right;
 	margin-top:-72px;
+	display:none;
 	}
 
 #slider{
