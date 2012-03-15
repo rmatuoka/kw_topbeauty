@@ -300,6 +300,12 @@ body{
 #edd-footer{
 	float:right;
 	margin-top:5px;
+	padding-top:4px;
+	background-image:url('../images/bg_redes_edd.png');
+	background-repeat:no-repeat;
+	width:528px;
+	height:24px;
+	text-align:right;
 	}
 	
 
@@ -319,6 +325,12 @@ body{
 
 #footer-vsh{
 	margin-top:5px;
+	padding-top:4px;
+	background-image:url('../images/bg_redes_edd.png');
+	background-repeat:no-repeat;
+	width:320px;
+	height:24px;
+	text-align:right;
 	}
 
 #body_footer{
@@ -387,15 +399,18 @@ body{
 	color:#808080;
 	}
 
-
-
 .footer_noticias{
 	position:absolute;
 	width:318px;
-	height:28px;
 	top:340px;
 	left:0px;
+	padding-top:4px;
+	background-image:url('../images/bg_redes_edd.png');
+	background-repeat:no-repeat;
+	height:24px;
+	text-align:right;
 	}
+
 #footer{
 	background-image:url('../images/bg_footer.jpg');
 	background-position:center top;

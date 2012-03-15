@@ -64,3 +64,57 @@
 .vermaisnoticias{
 	float:right;
 	}
+
+#dica_dia{
+	background-image:url('../images/img_dica_int.png');
+	background-repeat:no-repeat;
+	width:319px;
+	height:302px;
+	text-align:center;
+	font-family: 'Radley';
+	color:#2b0b19;
+	font-weight:normal;
+	font-size:15px;
+	padding-top:15px;
+	}
+
+#vai_sair_top{
+	background-image:url('../images/bg_sair_hoje_top.png');
+	background-repeat:no-repeat;
+	width:319px;
+	height:173px;
+	padding-top:15px;
+	}
+
+#vai_sair_top h3{
+	font-family: 'Radley';
+	color:#9c678a;
+	font-weight:normal;
+	font-size:20px;
+	width:120px;
+	margin-left:15px;
+	}
+
+#vai_sair_top h3 b{
+	font-family: 'Radley';
+	color:#721736;
+	font-weight:normal;
+	font-size:25px;
+	}
+
+#vai_sair_footer{
+	background-image:url('../images/bg_sair_hoje_footer.png');
+	background-repeat:no-repeat;
+	width:289px;
+	height:68px;
+	margin-top:10px;
+	text-align:center;
+	padding:15px;
+	}
+
+#vai_sair_footer h3{
+	font-family: 'Radley';
+	color:#60404e;
+	font-weight:normal;
+	font-size:15px;
+	}
