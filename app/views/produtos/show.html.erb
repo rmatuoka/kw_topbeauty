@@ -1,87 +1,110 @@
 ﻿<%title "Produto" %>
 <%content_for :head do%>
-	<%= stylesheet_link_tag "produto_interna.css" %>	
+<%= stylesheet_link_tag "produto_interna.css" %>
+<script>
+	function ShowBox(cod){
+	  jQuery("#Main_slider > div").addClass("hide");
+	  jQuery("#show_"+cod).removeClass("hide");
+	};
+
+	jQuery(document).ready(function() {
+	  jQuery("#Main_slider > div").addClass("hide");
+	});
+</script>	
 <%end%>
-<div id='interna'>
-    <div id='int-produto'>
-    	<h1>PRODUTOS</h1>
-        <img src="/images/linha_ondeencontrar.png" width="800" height="1" style="margin-bottom:20px;" />
-        <h3>Linha <%=@line.name%></h3>
-        <p><%=@line.description%></p>
-        <br />
-	
-	<%@categories.each do |c|%>
-		<h3 style="text-transform:uppercase;display:inline;"><%=link_to c.name, "javascript:alert(#{c.id});"%> |</h3>
-	<%end%>
-        
-		
-	<!--                  
-	<p>Cores vivas, modernas e variadas para atender a todos os estilos todos os esmaltes possuem qualidade única, fórmula testada e aprovada por mulheres de todo o País</p>
-        <div id='produto'>
-        	<div id='prod-esquerda'>
-            	<div id='img-produto'>
-                	<img src="/images/img_produto.png" width="107" height="267" />
-                </div>
-                <img src="/images/tit_veja_ampliado.png" style="margin-top:10px; margin-bottom:10px;"/><br />
-                <img src="/images/thumb_produto_um.png" />
-                <img src="/images/thumb_produto_dois.png" /><br />
-                <img src="/images/tit_cores.png" style="margin-top:10px; margin-bottom:10px;"/><Br />
-                <img src="/images/img_cores.png" />
-            </div>
-            <div id='prod-direita'>
-            	<h2>Nome da cor</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et justo quis libero fringilla fringilla ut vitae erat.</p>
-                <img src="/images/img_avalie.png" width="290" height="80" />
-                <img src="/images/linha_ondeencontrar.png" width="295" height="1" style="margin-top:5px;" />
-                <table width="300" border="0" cellspacing="0" cellpadding="0">
-                  <tr>
-                    <td align="right"><img src="/images/tit_moderna.png" width="60" height="11" /></td>
-                    <td height="35" align="center" valign="bottom"><img src="/images/bt_estrela_off.png" width="30" height="28" /></td>
-                    <td align="center" valign="bottom"><img src="/images/bt_estrela_off.png" width="30" height="28" /></td>
-                    <td align="center" valign="bottom"><img src="/images/bt_estrela_off.png" width="30" height="28" /></td>
-                    <td align="center" valign="bottom"><img src="/images/bt_estrela_off.png" width="30" height="28" /></td>
-                    <td align="center" valign="bottom"><img src="/images/bt_estrela_off.png" width="30" height="28" /></td>
-                  </tr>
-                  <tr>
-                    <td align="right" width="100"><img src="/images/tit_conservadora.png" width="91" height="11" /></td>
-                    <td height="35" align="center"><img src="/images/bt_estrela_off.png" width="30" height="28" /></td>
-                    <td align="center"><img src="/images/bt_estrela_off.png" width="30" height="28" /></td>
-                    <td align="center"><img src="/images/bt_estrela_off.png" width="30" height="28" /></td>
-                    <td align="center"><img src="/images/bt_estrela_off.png" width="30" height="28" /></td>
-                    <td align="center"><img src="/images/bt_estrela_off.png" width="30" height="28" /></td>
-                  </tr>
-                  <tr>
-                    <td align="right"><img src="/images/tit_sexy.png" width="33" height="14" /></td>
-                    <td height="35" align="center"><img src="/images/bt_estrela_off.png" width="30" height="28" /></td>
-                    <td align="center" valign="bottom"><img src="/images/bt_estrela_off.png" width="30" height="28" /></td>
-                    <td align="center"><img src="/images/bt_estrela_off.png" width="30" height="28" /></td>
-                    <td align="center"><img src="/images/bt_estrela_off.png" width="30" height="28" /></td>
-                    <td align="center"><img src="/images/bt_estrela_off.png" width="30" height="28" /></td>
-                  </tr>
-                </table>
-                <img src="/images/tit_periodo.png" width="83" height="31" /><br />
-                <img src="/images/linha_ondeencontrar.png" width="295" height="1" style="margin-top:5px;" />
-                <table width="300" border="0" cellspacing="0" cellpadding="0">
-                  <tr>
-                    <td align="right"><img src="/images/tit_noite.png" width="37" height="11" /></td>
-                    <td height="35" align="center" valign="bottom"><img src="/images/bt_estrela_off.png" width="30" height="28" /></td>
-                    <td align="center" valign="bottom"><img src="/images/bt_estrela_off.png" width="30" height="28" /></td>
-                    <td align="center" valign="bottom"><img src="/images/bt_estrela_off.png" width="30" height="28" /></td>
-                    <td align="center" valign="bottom"><img src="/images/bt_estrela_off.png" width="30" height="28" /></td>
-                    <td align="center" valign="bottom"><img src="/images/bt_estrela_off.png" width="30" height="28" /></td>
-                  </tr>
-                  <tr>
-                    <td align="right" width="100"><img src="/images/tit_dia.png" width="24" height="11" /></td>
-                    <td height="35" align="center" valign="bottom"><img src="/images/bt_estrela_off.png" width="30" height="28" /></td>
-                    <td align="center" valign="bottom"><img src="/images/bt_estrela_off.png" width="30" height="28" /></td>
-                    <td align="center" valign="bottom"><img src="/images/bt_estrela_off.png" width="30" height="28" /></td>
-                    <td align="center" valign="bottom"><img src="/images/bt_estrela_off.png" width="30" height="28" /></td>
-                    <td align="center" valign="bottom"><img src="/images/bt_estrela_off.png" width="30" height="28" /></td>
-                  </tr>
-               	</table>
-            </div>
-        </div> -->
-    </div>
+<div id="article">
+	<div id='interna'>
+	    <div id='int-produto'>
+	    	<h1>PRODUTOS</h1>
+		<img src="/images/linha_ondeencontrar.png" width="800" height="1" style="margin-bottom:20px;" />
+		<h3>Linha <%=@line.name%></h3>
+		<p><%=@line.description%></p>
+		<br />
+		<h3 style="text-transform:uppercase;" class="Clique_slider">
+		<%@categories.each do |c|%>
+			<%=link_to c.name, "javascript:void(0);", :onclick =>"ShowBox(#{c.id})"%> |
+		<%end%>
+		</h3>
+		<div id="Main_slider">
+			<%@categories.each do |c|%>
+				<div id="show_<%= c.id %>">
+					<p><%= c.description %></p>	
+					<% produto = c.products.first
+					   if !produto.blank?
+					   	colors = produto.colors.all
+						if colors.count > 0
+					%>
+					<div id='produto'>
+						<div id='prod-esquerda'>
+					    	<div id='img-produto'>
+							<%= image_tag colors.first.imgenamel_file_name %>
+						</div>
+						<img src="/images/tit_veja_ampliado.png" style="margin-top:10px; margin-bottom:10px;"/><br />
+						<img src="images/thumb_produto_um.png">
+						<img src="/images/tit_cores.png" style="margin-top:10px; margin-bottom:10px;"/><Br />
+						<img src="/images/img_cores.png" />
+					    </div>
+					    <div id='prod-direita'>
+					    	<h2><%= colors.first.name%></h2>
+						<p><%= colors.first.description%></p>
+						<img src="/images/img_avalie.png" width="290" height="80" />
+						<img src="/images/linha_ondeencontrar.png" width="295" height="1" style="margin-top:5px;" />
+						<table width="300" border="0" cellspacing="0" cellpadding="0">
+						  <tr>
+						    <td align="right"><img src="/images/tit_moderna.png" width="60" height="11" /></td>
+						    <td height="35" align="center" valign="bottom"><img src="/images/bt_estrela_off.png" width="30" height="28" /></td>
+						    <td align="center" valign="bottom"><img src="/images/bt_estrela_off.png" width="30" height="28" /></td>
+						    <td align="center" valign="bottom"><img src="/images/bt_estrela_off.png" width="30" height="28" /></td>
+						    <td align="center" valign="bottom"><img src="/images/bt_estrela_off.png" width="30" height="28" /></td>
+						    <td align="center" valign="bottom"><img src="/images/bt_estrela_off.png" width="30" height="28" /></td>
+						  </tr>
+						  <tr>
+						    <td align="right" width="100"><img src="/images/tit_conservadora.png" width="91" height="11" /></td>
+						    <td height="35" align="center"><img src="/images/bt_estrela_off.png" width="30" height="28" /></td>
+						    <td align="center"><img src="/images/bt_estrela_off.png" width="30" height="28" /></td>
+						    <td align="center"><img src="/images/bt_estrela_off.png" width="30" height="28" /></td>
+						    <td align="center"><img src="/images/bt_estrela_off.png" width="30" height="28" /></td>
+						    <td align="center"><img src="/images/bt_estrela_off.png" width="30" height="28" /></td>
+						  </tr>
+						  <tr>
+						    <td align="right"><img src="/images/tit_sexy.png" width="33" height="14" /></td>
+						    <td height="35" align="center"><img src="/images/bt_estrela_off.png" width="30" height="28" /></td>
+						    <td align="center" valign="bottom"><img src="/images/bt_estrela_off.png" width="30" height="28" /></td>
+						    <td align="center"><img src="/images/bt_estrela_off.png" width="30" height="28" /></td>
+						    <td align="center"><img src="/images/bt_estrela_off.png" width="30" height="28" /></td>
+						    <td align="center"><img src="/images/bt_estrela_off.png" width="30" height="28" /></td>
+						  </tr>
+						</table>
+						<img src="/images/tit_periodo.png" width="83" height="31" /><br />
+						<img src="/images/linha_ondeencontrar.png" width="295" height="1" style="margin-top:5px;" />
+						<table width="300" border="0" cellspacing="0" cellpadding="0">
+						  <tr>
+						    <td align="right"><img src="/images/tit_noite.png" width="37" height="11" /></td>
+						    <td height="35" align="center" valign="bottom"><img src="/images/bt_estrela_off.png" width="30" height="28" /></td>
+						    <td align="center" valign="bottom"><img src="/images/bt_estrela_off.png" width="30" height="28" /></td>
+						    <td align="center" valign="bottom"><img src="/images/bt_estrela_off.png" width="30" height="28" /></td>
+						    <td align="center" valign="bottom"><img src="/images/bt_estrela_off.png" width="30" height="28" /></td>
+						    <td align="center" valign="bottom"><img src="/images/bt_estrela_off.png" width="30" height="28" /></td>
+						  </tr>
+						  <tr>
+						    <td align="right" width="100"><img src="/images/tit_dia.png" width="24" height="11" /></td>
+						    <td height="35" align="center" valign="bottom"><img src="/images/bt_estrela_off.png" width="30" height="28" /></td>
+						    <td align="center" valign="bottom"><img src="/images/bt_estrela_off.png" width="30" height="28" /></td>
+						    <td align="center" valign="bottom"><img src="/images/bt_estrela_off.png" width="30" height="28" /></td>
+						    <td align="center" valign="bottom"><img src="/images/bt_estrela_off.png" width="30" height="28" /></td>
+						    <td align="center" valign="bottom"><img src="/images/bt_estrela_off.png" width="30" height="28" /></td>
+						  </tr>
+					       	</table>
+					    </div>
+					</div>
+
+					<%	end
+					   end
+					%>			
+				</div>	
+			<%end%>
+		</div>
+	    </div>
+	</div>
 </div>
-  
 

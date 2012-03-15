@@ -6,7 +6,7 @@ class ProdutosController < ApplicationController
 
   def show
 	@line = Line.find(params[:id])
-	@categories = @line.categories.all
+	@categories = @line.categories.all	
   end
 
 end
