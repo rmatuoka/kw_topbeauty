@@ -18,7 +18,20 @@
 	font-size:20px;
 	margin-bottom:10px;
 	}
-
+	#int-produto h3 a{
+		font-family: 'AkkoRoundedStd-Light';
+		color:#b99aae;
+		font-size:20px;
+		margin-bottom:10px;
+		text-decoration:none;
+		}
+		#int-produto h3 a:hover{
+			font-family: 'AkkoRoundedStd-Light';
+			color:#b99aae;
+			font-size:20px;
+			margin-bottom:10px;
+			text-decoration:underline;
+			}
 #int-produto p{
 	font-family: 'Radley';
 	color:#808080;

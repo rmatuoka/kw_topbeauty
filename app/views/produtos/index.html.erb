@@ -10,17 +10,10 @@
                 <p>A Top Beauty trabalha todos os dias para fornecer a você produtos com a mais alta tecnologia, qualidade e beleza.</p>
                 <p>Divididos em diversas linhas, cada produto traz características únicas, que podem expressar e valorizar as mais variadas personalidades. Aqui, você com certeza encontrará produtos que traduzem seu estilo.</p>
                 
-				<%@lines.each do |l|%>
-					a
-				<%end%>
-				<img src="images/img_prod1.png" width="962" height="242" style="margin-bottom:20px; margin-top:20px;" />
-                <img src="images/img_prod2.png" width="962" height="242" style="margin-bottom:20px; margin-top:20px;" />
-                <img src="images/img_prod3.png" width="962" height="242" style="margin-bottom:20px; margin-top:20px;" />
-                <img src="images/img_prod4.png" width="962" height="242" style="margin-bottom:20px; margin-top:20px;" />
-                <img src="images/img_prod5.png" width="962" height="242" style="margin-bottom:20px; margin-top:20px;" />
-                <img src="images/img_prod6.png" width="962" height="242" style="margin-bottom:20px; margin-top:20px;" />
-                <img src="images/img_prod7.png" width="962" height="242" style="margin-bottom:20px; margin-top:20px;" />
-                <img src="images/img_prod8.png" width="962" height="242" style="margin-bottom:20px; margin-top:20px;" />
+		<%@lines.each do |l|%>
+			<%=link_to(image_tag(l.imgline.url("medium"), :style => "margin-bottom:20px; margin-top:20px;"), produto_path(l))%>
+		<%end%>
+		
             </div>
         </div>
     </div>

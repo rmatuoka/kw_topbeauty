@@ -9,6 +9,7 @@ jQuery.noConflict();
 </script>
 <%=stylesheet_link_tag "reset.css" %>
 <%=stylesheet_link_tag "geral.css" %>
+<%= stylesheet_link_tag "noticias.css" %>
 <%=stylesheet_link_tag "../javascripts/fancybox/jquery.fancybox.css" %>
 <%=stylesheet_link_tag "slider.css" %>
 <%=javascript_include_tag  "jcycle.js" %>
@@ -114,6 +115,19 @@ jQuery(document).ready(function() {
 	});
 });
 
+</script>
+<script>
+	jQuery(function() {
+		jQuery("a.Swap")
+			.mouseover(function() { 
+				var src = jQuery(this).find(".Swapimg").attr("src").replace("mediumpb/", "medium/");
+			jQuery(this).find(".Swapimg").attr("src", src);
+			})
+			.mouseout(function() {
+				var src = jQuery(this).find(".Swapimg").attr("src").replace("medium/", "mediumpb/");
+				jQuery(this).find(".Swapimg").attr("src", src);
+			});
+	});
 </script>
 </head>
 
@@ -316,32 +330,20 @@ O brilho e astral da cidade são representados pelas partículas super grandes d
                 </div>
             </div>
         </div>
+	
         <div id='body_footer'>
-        	<img src="images/tit-noticias.png" width="116" height="27" /><br />
-        	<a href="noticia.html" target="_self">
-        	<div class="noticia">
-            	<div></div>
-                <p>09/03/11</p>
-                <h1>Pede sit in nibh nam, sapien lorem nonummy vestibulum malesuada.</h1>
-                <img class="footer_noticias" src="images/bg_noticias_footer.png" width="318" height="28" />
-            </div>
+	<div style="display:block; position:relative; text-align:left; width:960px; height:28px;"><img src="images/tit-noticias.png" width="116" height="27" style="position:absolute; left:0px !important; " /></div><br />
+            <%@noticias.each do|n|%>
+ 	    <a href="<%= noticia_path(n)%>" target="_self" class="Swap" >
+        	<div class="noticia"> 
+		    	<div><%= image_tag n.image.url(:mediumpb), :class=>"Swapimg" %></div>
+		        <p><%= n.created_at.strftime('%d/%m/%Y')%></p>
+		        <h1><%= strip_tags(n.description.slice(0,70))%></h1>
+		        <span class="footer_noticias"><img src="images/bg_noticias_footer.png" width="318" height="28"></span>
+                </div>
             </a>
-            <a href="noticia.html" target="_self">
-        	<div class="noticia">
-            	<div></div>
-                <p>09/03/11</p>
-                <h1>Pede sit in nibh nam, sapien lorem nonummy vestibulum malesuada.</h1>
-                <img class="footer_noticias" src="images/bg_noticias_footer.png" width="318" height="28" />
-            </div>
-            </a>
-            <a href="noticia.html" target="_self">
-        	<div class="noticia">
-            	<div></div>
-                <p>09/03/11</p>
-                <h1>Pede sit in nibh nam, sapien lorem nonummy vestibulum malesuada.</h1>
-                <img class="footer_noticias" src="images/bg_noticias_footer.png" width="318" height="28" />
-            </div>
-            </a>
+            <%end%>
+
         </div>
     </div>
     <%= render :file =>"layouts/_footer.html.erb" %>
