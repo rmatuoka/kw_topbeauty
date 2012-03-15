@@ -37,12 +37,20 @@
 					<div id='produto'>
 						<div id='prod-esquerda'>
 					    	<div id='img-produto'>
-							<%= image_tag colors.first.imgenamel_file_name %>
+							<%= image_tag colors.first.imgenamel.url%>
 						</div>
 						<img src="/images/tit_veja_ampliado.png" style="margin-top:10px; margin-bottom:10px;"/><br />
-						<img src="images/thumb_produto_um.png">
-						<img src="/images/tit_cores.png" style="margin-top:10px; margin-bottom:10px;"/><Br />
-						<img src="/images/img_cores.png" />
+						<%= image_tag colors.first.imghand.url(:small)%>
+						<%= image_tag colors.first.imgenamel.url(:small)%>
+						<br />
+						<img src="/images/tit_cores.png" style="margin-top:10px; margin-bottom:10px;"/><br />
+						<div id="Pallete_box">
+							<% colors.each do |color| %>
+							<%=link_to image_tag(color.imgpallete.url(:small)),"javascript:void(0);", :onclick =>"novoConteudo(#{color.id})"%>
+							
+							<%end%>
+
+						</div>
 					    </div>
 					    <div id='prod-direita'>
 					    	<h2><%= colors.first.name%></h2>
