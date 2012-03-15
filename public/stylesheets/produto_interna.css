@@ -50,14 +50,25 @@
 	background-position:center top;
 	background-repeat:no-repeat;
 	width:200px;
-	height:286px;
+	min-height:51px;
+	height:auto;
 	text-align:center;
 	}
 
 #img-produto img{
 	margin-top:10px;
 	}
-
+#Pallete_box
+{
+	width:171px;
+	height:51px;
+}
+#Pallete_box img
+{
+	border: #8c8c8c 1px solid ;
+	margin-right:9px;
+	margin-bottom:9px;
+}
 #prod-direita{
 	width:560px;
 	float:right;
