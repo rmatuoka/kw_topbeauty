@@ -1,0 +1,16 @@
+<% title "Banner" %>
+
+<p>
+  <strong>Texto:</strong>
+  <%= @banner.texto %>
+</p>
+<p>
+  <strong>Link:</strong>
+  <%= @banner.link %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_banner_path(@banner) %> |
+  <%= link_to "Destroy", @banner, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", banners_path %>
+</p>

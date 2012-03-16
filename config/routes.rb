@@ -1,5 +1,8 @@
 KwTopbeauty::Application.routes.draw do
 
+
+  resources :banners
+
   resources :noticias
   resources :produtos do
   	collection do

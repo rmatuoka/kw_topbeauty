@@ -10,7 +10,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120316154641) do
+ActiveRecord::Schema.define(:version => 20120316202517) do
+
+  create_table "banners", :force => true do |t|
+    t.text     "texto"
+    t.string   "link"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "imgbanner_file_name"
+    t.string   "imgbanner_content_type"
+    t.integer  "imgbanner_file_size"
+    t.datetime "imgbanner_updated_at"
+  end
 
   create_table "categories", :force => true do |t|
     t.string   "name"
