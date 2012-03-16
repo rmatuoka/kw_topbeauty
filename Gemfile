@@ -5,14 +5,14 @@ gem 'rails', '3.0.10'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'mysql2', '< 0.3'
+gem 'mysql2', '= 0.2.7'
 gem "nifty-generators", :group => :development
 gem 'mail'
 gem 'mongrel'
 gem "will_paginate", "~> 2.3.15"
 gem 'jquery-rails', '>= 1.0.12'
 gem "browser"
-#gem "paperclip", "= 2.6.0"
+gem "paperclip", "= 2.3.8"
 gem 'tiny_mce', '= 0.1.4'
 
 
