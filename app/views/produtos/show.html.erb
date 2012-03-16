@@ -98,19 +98,19 @@
 						  <tr>
 						    <td align="right"><img src="/images/tit_moderna.png" width="60" height="11" /></td>
 						    <td height="35" align="center" valign="bottom">
-                  <div id="moderna" class="rateit bigstars" id="rateit1" data-campo="moderna" data-rateit-starwidth="30" data-rateit-starheight="28" data-colorid="<%= colors.first.id%>" data-rateit-value="<%= colors.first.modern / colors.first.modern_total %>"></div>
+                  <div id="moderna" class="rateit bigstars" id="rateit1" data-campo="moderna" data-rateit-starwidth="30" data-rateit-starheight="28" data-colorid="<%= colors.first.id%>" data-rateit-value="<%= colors.first.modern / colors.first.modern_total rescue 0 %>"></div>
                 </td>
 						  </tr>
 						  <tr>
 						    <td align="right" width="100"><img src="/images/tit_conservadora.png" width="91" height="11" /></td>
 						    <td height="35" align="center">
-                    <div  id="conservadora" class="rateit bigstars"  data-campo="conservadora" data-rateit-starwidth="30" data-rateit-starheight="28" data-colorid="<%= colors.first.id%>" data-rateit-value="<%= colors.first.conservative / colors.first.conservative_total %>"></div>                
+                    <div  id="conservadora" class="rateit bigstars"  data-campo="conservadora" data-rateit-starwidth="30" data-rateit-starheight="28" data-colorid="<%= colors.first.id%>" data-rateit-value="<%= colors.first.conservative / colors.first.conservative_total rescue 0 %>"></div>                
                 </td>
 						  </tr>
 						  <tr>
 						    <td align="right"><img src="/images/tit_sexy.png" width="33" height="14" /></td>
 						    <td height="35" align="center">
-                  <div  id="sexy" class="rateit bigstars"  data-campo="sexy" data-rateit-starwidth="30" data-rateit-starheight="28" data-colorid="<%= colors.first.id%>"  data-rateit-value="<%= colors.first.sexy / colors.first.sexy_total %>"></div></td>
+                  <div  id="sexy" class="rateit bigstars"  data-campo="sexy" data-rateit-starwidth="30" data-rateit-starheight="28" data-colorid="<%= colors.first.id%>"  data-rateit-value="<%= colors.first.sexy / colors.first.sexy_total rescue 0 %>"></div></td>
 						  </tr>
 						</table>
 
@@ -121,13 +121,13 @@
 						  <tr>
 						    <td align="right"><img src="/images/tit_noite.png" width="37" height="11" /></td>
 						    <td height="35" align="center" valign="bottom">
-                  <div  id="noite" class="rateit bigstars"  data-campo="noite" data-rateit-starwidth="30" data-rateit-starheight="28" data-colorid="<%= colors.first.id%>" data-rateit-value="<%= colors.first.night / colors.first.night_total %>"></div>
+                  <div  id="noite" class="rateit bigstars"  data-campo="noite" data-rateit-starwidth="30" data-rateit-starheight="28" data-colorid="<%= colors.first.id%>" data-rateit-value="<%= colors.first.night / colors.first.night_total rescue 0 %>"></div>
                 </td>
 						  </tr>
 						  <tr>
 						    <td align="right" width="100"><img src="/images/tit_dia.png" width="24" height="11" /></td>
 						    <td height="35" align="center" valign="bottom">
-                    <div class="rateit bigstars"  data-campo="dia" data-rateit-starwidth="30" data-rateit-starheight="28" data-colorid="<%= colors.first.id%>"  data-rateit-value="<%= colors.first.day / colors.first.day_total %>"></div>                
+                    <div class="rateit bigstars"  data-campo="dia" data-rateit-starwidth="30" data-rateit-starheight="28" data-colorid="<%= colors.first.id%>"  data-rateit-value="<%= colors.first.day / colors.first.day_total rescue 0 %>"></div>                
                 </td>
 						  </tr>
 					       	</table>

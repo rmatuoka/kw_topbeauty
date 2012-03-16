@@ -1,4 +1,9 @@
-class BannersController < ApplicationController
+class Admin::BannersController < ApplicationController
+  access_control do
+      allow :admin, :all
+  end
+  
+  layout "inadmin"  
   def index
     @banners = Banner.all
   end
@@ -14,7 +19,7 @@ class BannersController < ApplicationController
   def create
     @banner = Banner.new(params[:banner])
     if @banner.save
-      redirect_to @banner, :notice => "Successfully created banner."
+      redirect_to [:admin, @banner], :notice => "Successfully created banner."
     else
       render :action => 'new'
     end
@@ -27,7 +32,7 @@ class BannersController < ApplicationController
   def update
     @banner = Banner.find(params[:id])
     if @banner.update_attributes(params[:banner])
-      redirect_to @banner, :notice  => "Successfully updated banner."
+      redirect_to [:admin, @banner], :notice  => "Successfully updated banner."
     else
       render :action => 'edit'
     end
@@ -36,6 +41,6 @@ class BannersController < ApplicationController
   def destroy
     @banner = Banner.find(params[:id])
     @banner.destroy
-    redirect_to banners_url, :notice => "Successfully destroyed banner."
+    redirect_to admin_banners_path, :notice => "Successfully destroyed banner."
   end
 end

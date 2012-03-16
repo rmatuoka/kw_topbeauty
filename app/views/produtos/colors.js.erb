@@ -1,16 +1,17 @@
+jQuery('#moderna').rateit('value',<%=@moderna%>)
+jQuery('#conservadora').rateit('value',<%=@conservadora%>)
+jQuery('#sexy').rateit('value',<%=@sexy%>)
+jQuery('#dia').rateit('value',<%=@dia%>)
+jQuery('#noite').rateit('value',<%=@noite%>)
+
+
 jQuery("#prod-direita h2").html("<%=@color.name%>")
 
 jQuery("#prod-direita p").html("<%=@color.description%>")
 
 jQuery("#img_prod").src = "<%=@color.imgenamel.url(:medium)%>"
 
-jQuery(".rateit").attr("data-colorid", "<%=@color.id%>")
+ljQuery(".rateit").attr("data-colorid", "<%=@color.id%>")
 
-$('#moderna').rateit('value',<%=@moderna%>)
-
-//jQuery("#conservadora").attr("data-rateit-value", "<%=(@color.conservative / @color.conservative_total)  if @color.conservative_total > 0%>")
-//jQuery("#sexy").attr("data-rateit-value", "<%=(@color.sexy / @color.sexy_total) if @color.sexy_total > 0%>")
-//jQuery("#dia").attr("data-rateit-value", "<%=(@color.day / @color.day_total) if @color.day_total > 0%>")
-//jQuery("#noite").attr("data-rateit-value", "<%=(@color.night / @color.night_total) if @color.night_total > 0%>")
 
 

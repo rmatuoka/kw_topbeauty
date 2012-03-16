@@ -1,0 +1,24 @@
+﻿<% title "Banners" %>
+
+<h1>Banners</h1><br />
+<br />
+<p>Verifique se as informações abaixo estão corretas.</p><br />
+<br />
+<p>
+  <strong>Texto:</strong>
+  <%= @banner.texto %>
+</p>
+<p>
+  <strong>Link:</strong>
+  <%= @banner.link %>
+</p>
+<br />
+<p>
+  <strong>Imagem:</strong>
+  <%= image_tag(@banner.imgbanner.url)  %>
+</p>
+<br />
+<br />
+<p><%= submit_tag "Voltar",:type=>"button",:onclick=>"window.open('"+admin_banners_path+"','_self');", :class => "Bt_enviar", :style=>"margin-right: 5px;"%></p>
+
+

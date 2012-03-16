@@ -18,6 +18,30 @@ before_filter :force_request_format_to_html, :except => :colors
       @moderna = 0
     end
 
+    if @color.conservative_total > 0
+      @conservadora = @color.conservative / @color.conservative_total
+    else
+      @conservadora = 0
+    end  
+
+    if @color.sexy_total > 0
+      @sexy = @color.sexy / @color.sexy_total
+    else
+      @sexy = 0
+    end  
+
+    if @color.day_total > 0
+      @dia = @color.day / @color.day_total
+    else
+      @dia = 0
+    end 
+
+    if @color.night_total > 0
+      @noite = @color.night / @color.night_total
+    else
+      @noite = 0
+    end 
+
 
   end
 

@@ -1,8 +1,5 @@
 KwTopbeauty::Application.routes.draw do
 
-
-  resources :banners
-
   resources :noticias
   resources :produtos do
   	collection do
@@ -27,6 +24,7 @@ KwTopbeauty::Application.routes.draw do
         end
       end
     end
+     resources :banners
     resources :posts 
     resources :static_contents
     resources :users do
