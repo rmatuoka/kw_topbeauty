@@ -14,6 +14,8 @@ gem 'jquery-rails', '>= 1.0.12'
 gem "browser"
 gem "paperclip"
 gem 'tiny_mce', '= 0.1.4'
+gem 'ajaxful_rating', :git => 'git://github.com/edgarjs/ajaxful-rating.git', :branch => "rails3"
+
 
 
 # Use unicorn as the web server

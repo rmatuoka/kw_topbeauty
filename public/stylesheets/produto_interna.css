@@ -1,3 +1,4 @@
+
 #int-produto{
 	margin-top:240px;
 	text-align:left;
@@ -9,7 +10,6 @@
 	font-family: 'AkkoRoundedStd-Light';
 	color:#9f5284;
 	font-size:25px;
-	margin-bottom:5px;
 	}
 
 #int-produto h3{
@@ -101,3 +101,36 @@
 .hide{
 	display:none;
 }
+/*
+Rating css -----------------------------------------------------------------------------
+*/
+div.bigstars div.rateit-range
+{
+    background: url(/images/bt_estrela_off.png) !important;
+    height: 28px;
+}
+
+
+div.bigstars div.rateit-hover
+{
+    background: url(/images/bt_estrela_on.png) !important;
+}
+
+div.bigstars div.rateit-selected
+{
+    background: url(/images/bt_estrela_on.png) !important;
+}
+
+div.bigstars div.rateit-reset
+{
+    background: url(/images/bt_estrela_off.png) !important;
+    width: 30px !important;
+    height: 28px !important;
+    display:none !important;
+}
+
+div.bigstars div.rateit-reset:hover
+{
+    background: url(/images/bt_estrela_on.png) !important;
+}
+

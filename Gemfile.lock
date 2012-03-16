@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/edgarjs/ajaxful-rating.git
+  revision: 8a80ae76be2dd304f2e7ec991af7daca205bc501
+  branch: rails3
+  specs:
+    ajaxful_rating (3.0.0.beta8)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -99,6 +106,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  ajaxful_rating!
   browser
   jquery-rails (>= 1.0.12)
   mail

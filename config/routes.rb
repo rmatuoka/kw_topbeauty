@@ -1,7 +1,13 @@
 KwTopbeauty::Application.routes.draw do
 
   resources :noticias
-  resources :produtos
+  resources :produtos do
+  	collection do
+		get 'colors'	
+		post 'rating'
+		get 'rating'
+	end
+  end
   resources :t_conosco
   resources :contato
   resources :home
