@@ -12,9 +12,8 @@ gem 'mongrel'
 gem "will_paginate", "~> 2.3.15"
 gem 'jquery-rails', '>= 1.0.12'
 gem "browser"
-gem "paperclip"
+#gem "paperclip", "= 2.6.0"
 gem 'tiny_mce', '= 0.1.4'
-gem 'ajaxful_rating', :git => 'git://github.com/edgarjs/ajaxful-rating.git', :branch => "rails3"
 
 
 
