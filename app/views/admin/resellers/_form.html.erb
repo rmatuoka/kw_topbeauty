@@ -1,0 +1,47 @@
+<% content_for :head do %>
+<%= include_tiny_mce_if_needed %>
+<% end %>
+<div id="Box_form">
+	
+<%= form_for [:admin, @reseller] do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :fantasy_name %><br />
+    <%= f.text_field :fantasy_name %>
+  </p>
+  <p>
+    <%= f.label :address %><br />
+    <%= f.text_field :address %>
+  </p>
+  <p>
+    <%= f.label :number %><br />
+    <%= f.text_field :number %>
+  </p>
+  <p>
+    <%= f.label :neibourhood %><br />
+    <%= f.text_field :neibourhood %>
+  </p>
+  <p>
+    <%= f.label :city %><br />
+    <%= f.text_field :city %>
+  </p>
+  <p>
+    <%= f.label :state %><br />
+    <%= f.text_field :state %>
+  </p>
+  <p>
+    <%= f.label :phone %><br />
+    <%= f.text_field :phone %>
+  </p>
+  <p>
+    <%= f.label :active %><br />
+    <%= f.check_box :active %>
+  </p>
+  <p><%= f.submit %></p>
+  <p><%= submit_tag "Voltar",:type=>"button",:onclick=>"window.open('"+admin_resellers_path+"','_self');", :class => "Bt_enviar", :style=>"margin-right: 5px;"%> <%= f.submit "Salvar", :class => "Bt_enviar" %></p>
+<% end %>
+</div>

@@ -1,0 +1,42 @@
+<% title "Lista de Lojas" %>
+<h1>Lista de Lojas</h1><br />
+<p>Verifique abaixo a lista das Lojas cadastrados no sistema.</p><br />
+<br />
+<p style="text-align: right;"><%= submit_tag "+ Criar novo",:type=>"button",:onclick=>"window.open('"+new_admin_reseller_path+"','_self');", :class => "Bt_enviar"%> </p>
+<br />
+
+<table cellspacing="0" class="tablesorter">
+  <thead> 
+  <tr>
+    <th>Name</th>
+    <th>Fantasy Name</th>
+    <th>Address</th>
+    <th>Number</th>
+    <th>Neibourhood</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Phone</th>
+    <th>Active</th>
+    <th colspan="3" style="width:50%;">Ações</th>
+  </tr>
+  </thead> 
+  <tbody>
+  <% for reseller in @resellers %>
+    <tr>
+      <td><%= reseller.name %></td>
+      <td><%= reseller.fantasy_name %></td>
+      <td><%= reseller.address %></td>
+      <td><%= reseller.number %></td>
+      <td><%= reseller.neibourhood %></td>
+      <td><%= reseller.city %></td>
+      <td><%= reseller.state %></td>
+      <td><%= reseller.phone %></td>
+      <td><%= reseller.active %></td>
+      <td><%= link_to "Show", [:admin, reseller] %></td>
+      <td><%= link_to "Edit", edit_admin_reseller_path(reseller) %></td>
+      <td><%= link_to "Destroy", [:admin, reseller], :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+   </tbody>
+</table>
+
