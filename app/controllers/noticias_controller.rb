@@ -2,8 +2,8 @@ class NoticiasController < ApplicationController
 
 
   def index
-	@noticias=Post.all
-	render :layout => "internal_center"
+  	@noticias=Post.all
+  	render :layout => "internal_center"
   end 
   
   def show

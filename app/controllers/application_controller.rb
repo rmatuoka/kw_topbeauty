@@ -34,4 +34,8 @@ class ApplicationController < ActionController::Base
        redirect_to login_path
      end
    end
+   
+   def load_banners
+      @banners = Banner.first(:order => "RAND()")
+   end
 end

@@ -1,5 +1,6 @@
 class OndeEncontrarController < ApplicationController
-  before_filter :load_states
+  before_filter :load_states, :load_banners
+  
   layout "application", :except => :popula_cidades
   
   def index
