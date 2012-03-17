@@ -1,0 +1,21 @@
+one:
+  name: MyString
+  fantasy_name: MyString
+  address: MyString
+  number: MyString
+  neibourhood: MyString
+  city: MyString
+  state: MyString
+  phone: MyString
+  active: false
+
+two:
+  name: MyString
+  fantasy_name: MyString
+  address: MyString
+  number: MyString
+  neibourhood: MyString
+  city: MyString
+  state: MyString
+  phone: MyString
+  active: false

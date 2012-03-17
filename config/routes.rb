@@ -15,6 +15,12 @@ KwTopbeauty::Application.routes.draw do
   resources :users
   resources :password_resets
   resources :atualizar
+  resources :onde_encontrar do
+    collection do
+      post 'resultados'
+      get 'popula_cidades'
+    end
+  end
   #Inicio do namespace Admin
   namespace(:admin){
     resources :lines do
@@ -24,7 +30,8 @@ KwTopbeauty::Application.routes.draw do
         end
       end
     end
-     resources :banners
+    resources :resellers 
+    resources :banners
     resources :posts 
     resources :static_contents
     resources :users do
@@ -42,7 +49,6 @@ KwTopbeauty::Application.routes.draw do
   match 'login' => 'user_sessions#new'  
   match 'logout' => 'user_sessions#destroy' 
   match 'empresa' => "static_contents#empresa" 
-  match 'onde_encontrar' => "static_contents#onde_encontrar" 
   match 'politica_de_privacidade' => "static_contents#politica_de_privacidade" 
   match 'termos_de_uso' => "static_contents#termos_de_uso" 
 
