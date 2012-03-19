@@ -1,0 +1,105 @@
+@font-face {
+    font-family: 'AkkoRoundedStd-Light';9c678a
+    src: url('../fonts/akkoroundedstd-light.eot');
+    src: url('../fonts/akkoroundedstd-light.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/akkoroundedstd-light.woff') format('woff'),
+         url('../fonts/akkoroundedstd-light.ttf') format('truetype'),
+         url('../fonts/akkoroundedstd-light.svg#akkoroundedstd-light') format('svg');
+    font-weight: normal;
+    font-style: normal;
+	
+}
+
+@font-face {
+    font-family: 'AkkoStd-Bold';
+    src: url('../fonts/akkostd-bold.eot');
+    src: url('../fonts/akkostd-bold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/akkostd-bold.woff') format('woff'),
+         url('../fonts/akkostd-bold.ttf') format('truetype'),
+         url('../fonts/akkostd-bold.svg#akkostd-bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Radley-Italic';
+    src: url('../fonts/radley-italic.eot');
+    src: url('../fonts/radley-italic.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/radley-italic.woff') format('woff'),
+         url('../fonts/radley-italic.ttf') format('truetype'),
+         url('../fonts/radley-italic.svg#radley-italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Radley';
+    src: url('../fonts/radley-regular.eot');
+    src: url('../fonts/radley-regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/radley-regular.woff') format('woff'),
+         url('../fonts/radley-regular.ttf') format('truetype'),
+         url('../fonts/radley-regular.svg#radley-regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.pergunta_impar{
+	font-family: 'AkkoRoundedStd-Light';
+	color:#808080;
+	font-size:15px;
+	height:27px;
+	padding-top:10px;
+	padding-left:20px;
+	}
+
+.pergunta_par{
+	background-image:url('../images/bg_item_assistente.png');
+	font-family: 'AkkoRoundedStd-Light';
+	color:#808080;
+	font-size:15px;
+	height:27px;
+	padding-top:10px;
+	padding-left:20px;
+	}
+
+h2{
+	font-family: 'AkkoRoundedStd-Light';
+	color:#9f5284;
+	font-size:20px;
+	margin:0;
+	padding:0;
+	font-weight:normal;
+	margin-bottom:20px;
+	margin-top:30px;
+	}
+
+.radio{
+	float:right;
+	margin-right:10px;
+	}
+
+.linha{
+	width:480px;
+	margin-left:10px;
+	margin-top:20px;
+	}
+
+#botoes{
+	margin-top:20px;
+	}
+
+#botoes img{
+	margin-left:10px;
+	margin-right:10px;
+	}
+
+h3{
+	font-family: 'AkkoRoundedStd-Light';
+	color:#9f5284;
+	font-size:20px;
+	margin:0;
+	padding:0;
+	font-weight:normal;
+	margin-top:70px;
+	float:right;
+	}

@@ -1,0 +1,2 @@
+module Assistente::HomeHelper
+end

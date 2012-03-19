@@ -1,0 +1,2 @@
+module Assistente::CompromissoHelper
+end

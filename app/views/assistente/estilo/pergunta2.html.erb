@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<link href="/stylesheets/assistente.css" type="text/css" rel="stylesheet" />
+<link href="/stylesheets/perguntas.css" type="text/css" rel="stylesheet" />
+</head>
+<body>	
+	<h2>2 - Dentre as op&ccedil;&otilde;es abaixo assinale qual seu estilo de filme favorito:</h2>
+	<%=form_tag assistente_estilo_pergunta3_path(0), :method => :post%>
+	<div class="pergunta_impar">Drama.							<%=radio_button_tag :option, "t", false, :class => "radio"%></div>
+	<div class="pergunta_par">Com&eacute;dia Rom&acirc;ntica.	<%=radio_button_tag :option, "r", false, :class => "radio"%></div>
+	<div class="pergunta_impar">A&ccedil;&atilde;o.				<%=radio_button_tag :option, "o", false, :class => "radio"%></div>
+	<div class="pergunta_par">Com&eacute;dia.					<%=radio_button_tag :option, "e", false, :class => "radio"%></div>
+	<img src='/images/linha_ondeencontrar.png' class="linha">
+	<table width="500" border="0" cellspacing="0" cellpadding="0" id="botoes">
+	  <tr>
+	    <td><a href="<%=assistente_estilo_pergunta1_path(0)%>"><img src='/images/bt_anterior.png'></a></td>
+	    <td align="right"><a><%=image_submit_tag "bt_proximo.png"%></a></td>
+	  </tr>
+	</table>
+	<h3>Pergunta 2 de 5.</h3>
+	<form>
+</body>
+</html>

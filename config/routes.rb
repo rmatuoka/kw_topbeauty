@@ -1,5 +1,4 @@
 KwTopbeauty::Application.routes.draw do
-
   resources :noticias
   resources :produtos do
   	collection do
@@ -43,6 +42,29 @@ KwTopbeauty::Application.routes.draw do
     root :to => "static_contents#index"
   }
   #Final do namespace Admin
+  
+  #Inicio do namespace assistente
+  namespace(:assistente){
+    resources :home
+    resources :estilo do
+      get 'pergunta1'
+      get 'pergunta2'
+      get 'pergunta3'
+      get 'pergunta4'
+      get 'pergunta5'
+      
+      post 'pergunta1'
+      post 'pergunta2'
+      post 'pergunta3'
+      post 'pergunta4'
+      post 'pergunta5'
+      
+      post 'resposta'
+      get 'resposta'
+    end
+    resources :compromisso
+    root :to => "home#index"
+  }
   
   root :to => "home#index"
   match 'cadastro' => "users#new"

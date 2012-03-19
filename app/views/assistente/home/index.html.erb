@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<link href="stylesheets/assistente.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="javascripts/jquery.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("#por_ocasiao").click(function(){
+			$('.ocasiao').removeClass("hide");
+			$('#por_estilo').addClass("hide");
+			$(this).addClass('bg_ocasiao');
+		});
+		
+		$("#por_estilo").click(function(){
+			$('.estilo').removeClass("hide");
+			$('#por_ocasiao').addClass("hide");
+			$(this).addClass('bg_estilo');
+		});
+	});
+</script>
+</head>
+<body>
+<div id='assistente'>
+	<h1>Qual é o seu esmalte?</h1>
+    <p>Quer saber quais as cores que combinam com você? Vai sair e não sabe qual esmalte escolher? Selecione uma das opções abaixo e descubra as respostas!</p>
+	<div id='esquerda'>
+    	<!-- <a href="javascript:void(0);"><div id="por_ocasiao"></div></a>-->
+        <a href="javascript:void(0);"><div id="por_estilo"></div></a>
+    </div>
+    <div id='direita'>
+    	<iframe width="519" height="440" frameborder="0" scrolling="no" src="" class="ocasiao hide"></iframe>
+        <iframe width="519" height="440" frameborder="0" scrolling="no" src="<%=assistente_estilo_pergunta1_path(0)%>" class="estilo hide"></iframe>
+    </div>
+</div>
+</body>
+</html>

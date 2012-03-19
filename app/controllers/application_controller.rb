@@ -36,6 +36,6 @@ class ApplicationController < ActionController::Base
    end
    
    def load_banners
-      @banners = Banner.first(:order => "RAND()")
+      @banner = Banner.first(:order => "RAND()")
    end
 end
