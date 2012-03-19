@@ -1,6 +1,7 @@
 class ProdutosController < ApplicationController
   layout "internal_center", :except => :rating
-before_filter :force_request_format_to_html, :except => :colors
+  before_filter :load_banners
+  before_filter :force_request_format_to_html, :except => :colors
   def index
 	@lines = Line.all
   end

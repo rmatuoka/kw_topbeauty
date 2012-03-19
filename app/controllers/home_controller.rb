@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
-layout "home"
+  before_filter :load_banners
+  layout "home"
   def index
 	@noticias = Post.all(:limit => 3)
   end

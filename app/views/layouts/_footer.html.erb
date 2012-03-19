@@ -10,7 +10,10 @@
 		</div>
 		<div class="footer_box2" >
 			<img src="/images/tit-produtos.png" width="74" height="15" />
-			<p><a href="produto_interna.html">Linha Básica</a></p>
+			<%@lines.each do |l|%>
+				<p><%=link_to l.name, produto_path(l)%></p>
+			<%end%>
+			<!-- <p><a href="produto_interna.html">Linha Básica</a></p>
 			<p><a href="produto_interna.html">142</a></p>
 			<p><a href="produto_interna.html">Linha Cuidados</a></p>
 			<p><a href="produto_interna.html">Crash</a></p>
@@ -18,7 +21,7 @@
 			<p><a href="produto_interna.html">Sensitive</a></p>
 			<p><a href="produto_interna.html">Ultimate 3D</a></p>
 			<p><a href="produto_interna.html">Ultimate Glitter</a></p>
-			<p><a href="produto_interna.html">Glitter</a></p>
+			<p><a href="produto_interna.html">Glitter</a></p>-->
 		</div>
 		<div class="footer_box2" >
 			<img src="/images/tit-top-beauty.png" width="94" height="19" />

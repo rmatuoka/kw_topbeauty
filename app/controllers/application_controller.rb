@@ -37,5 +37,7 @@ class ApplicationController < ActionController::Base
    
    def load_banners
       @banner = Banner.first(:order => "RAND()")
+      @lines = Line.all
+      #.sqlCommand("SELECT * FROM lines WHERE ")
    end
 end
