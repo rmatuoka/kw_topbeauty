@@ -6,4 +6,3 @@ tmp/**/*
 config/database.yml
 config/environment.rb
 config/initializers/setup_mail.rb
-public/system/**/*
