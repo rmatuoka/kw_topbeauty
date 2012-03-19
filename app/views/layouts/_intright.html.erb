@@ -4,7 +4,7 @@
 		<div id='dica_dia'>
 			<%=image_tag(@banner.imgbanner.url(:medium)) if !@banner.blank?%>
 			<!-- <img src="images/img_dica.png" width="223" height="248" /> -->
-			<p><%=@banner.texto if !@banner.blank?%></p>
+			<p style="width:90%; margin-left:10px; color:#60404E;"><%=@banner.texto if !@banner.blank?%></p>
 		</div>
 	</div>
 	<div id='int-vsh'>

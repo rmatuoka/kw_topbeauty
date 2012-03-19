@@ -16,7 +16,6 @@
   <tbody>
   <% for color in @colors %>
     <tr>
-		<td><%= color.product_id %></td>
 	      <td><%= color.name %></td>
 	      <td><%= color.description %></td>
 	      <td><%= link_to "Show", admin_line_category_product_color_path(@line, @category,@product, color) %></td>
