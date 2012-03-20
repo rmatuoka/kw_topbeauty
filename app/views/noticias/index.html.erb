@@ -28,7 +28,7 @@ $contador =0
 			<div class="noticia" <%=raw 'style=" margin-top:50px;"' if ($div > 2)%>>
 				<div><%= image_tag noticiashow.image.url(:mediumpb), :class=>"Swapimg" %></div>
 				<p><%= noticiashow.created_at.strftime('%d/%m/%Y')%></p>
-				<h1><%= strip_tags(noticiashow.description.slice(0,70))%></h1>
+				<h1><%= strip_tags(noticiashow.sumary.slice(0,70))%></h1>
 				<span class="footer_noticias"><img src="images/bg_noticias_footer.png" width="318" height="28"></span>				
 			</div>
 			</a>
@@ -39,7 +39,7 @@ $contador =0
 			<div class="noticia" <%=raw 'style=" margin-top:50px;"' if $div > 2%>>
 				<div><%= image_tag noticiashow.image.url(:mediumpb), :class=>"Swapimg" %></div>
 				<p><%= noticiashow.created_at.strftime('%d/%m/%Y')%></p>
-				<h1><%= strip_tags(noticiashow.description.slice(0,70))%></h1>
+				<h1><%= strip_tags(noticiashow.sumary.slice(0,70))%></h1>
 				<span class="footer_noticias"><img src="images/bg_noticias_footer.png" width="318" height="28"></span>
 			</div>
 			</a>
