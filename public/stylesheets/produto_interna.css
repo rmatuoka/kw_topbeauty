@@ -1,7 +1,9 @@
 
 #int-produto{
-	margin-top:240px;
+	position:relative;
 	text-align:left;
+	min-height:500px;
+	heigth:auto;
 	width:800px;
 	float:right;
 	}
@@ -117,9 +119,6 @@
 
 
 
-#footer{
-	top:1000px;
-	}
 .hide{
 	display:none;
 }
