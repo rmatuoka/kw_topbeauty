@@ -11,9 +11,9 @@
 		</div>
 		<div class="footer_box2" >
 			<img src="/images/tit-produtos.png" width="74" height="15" />
-			<!--<%#@lines.each do |l|%>
-				<p><%#=link_to l.name, produto_path(l)%></p>
-			<%#end%>-->
+			<%@lines.each do |l|%>
+				<p><%=link_to l.name, produto_path(l)%></p>
+			<%end%>
 			<!-- <p><a href="produto_interna.html">Linha Básica</a></p>
 			<p><a href="produto_interna.html">142</a></p>
 			<p><a href="produto_interna.html">Linha Cuidados</a></p>
