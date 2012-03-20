@@ -9,9 +9,9 @@ jQuery("#prod-direita h2").html("<%=@color.name%>")
 
 jQuery("#prod-direita p").html("<%=@color.description%>")
 
-jQuery("#img_prod").src = "<%=@color.imgenamel.url(:medium)%>"
+jQuery("div #img_prod").attr("src","<%=@color.imgenamel.url(:medium)%>")
 
-ljQuery(".rateit").attr("data-colorid", "<%=@color.id%>")
+jQuery(".rateit").attr("data-colorid", "<%=@color.id%>")
 
 
 

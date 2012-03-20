@@ -11,7 +11,7 @@
 	};
 
 	jQuery(document).ready(function() {
-	  jQuery("#Main_slider > div").addClass("hide");
+	  //jQuery("#Main_slider > div").addClass("hide");
 
     //we bind only to the rateit controls within the products div
      jQuery('.rateit').bind('rated reset', function (e) {
@@ -56,14 +56,15 @@
 		<h3>Linha <%=@line.name%></h3>
 		<p><%=@line.description%></p>
 		<br />
-		<h3 style="text-transform:uppercase;" class="Clique_slider">
+		<h4 class="Clique_slider">
 		<%@categories.each do |c|%>
 			<%=link_to c.name, "javascript:void(0);", :onclick =>"ShowBox(#{c.id})"%> |
 		<%end%>
-		</h3>
+		</h4>
 		<div id="Main_slider">
+			<%counter = 0%>
 			<%@categories.each do |c|%>
-				<div id="show_<%= c.id %>">
+				<div id="show_<%= c.id %>" <%="class = 'hide'" if counter > 0%>>
 					<p><%= c.description %></p>	
 					<% produto = c.products.first
 					   if !produto.blank?
@@ -73,71 +74,74 @@
 					<div id='produto'>
 						<div id='prod-esquerda'>
 					    	<div id='img-produto'>
-							<%= image_tag colors.first.imgenamel.url, :id => "img_prod"%>
-						</div>
+								<%= image_tag colors.first.imgenamel.url, :id => "img_prod", :width => "120"%>
+							</div>
+						
 						<img src="/images/tit_veja_ampliado.png" style="margin-top:10px; margin-bottom:10px;"/><br />
-						<%= image_tag colors.first.imghand.url(:small)%>
+						<!-- <%= image_tag colors.first.imghand.url(:small)%>-->
 						<%= image_tag colors.first.imgenamel.url(:small)%>
 						<br />
 						<img src="/images/tit_cores.png" style="margin-top:10px; margin-bottom:10px;"/><br />
-						<div id="Pallete_box">
-							<% colors.each do |color| %>
-							<%=link_to(image_tag(color.imgpallete.url(:small)), colors_produtos_path + "?cor=" + color.id.to_s, :remote => :true)%>
-							
-							<%end%>					
-
-						</div>
+							<div id="Pallete_box">
+								<% colors.each do |color| %>
+								<%=link_to(image_tag(color.imgpallete.url(:small)), colors_produtos_path + "?cor=" + color.id.to_s, :remote => :true)%>
+								<%end%>					
+							</div>
 					    </div>
+					
 					    <div id='prod-direita'>
-					    	<h2><%= colors.first.name%></h2>
-						<p><%= colors.first.description%></p>
-						<img src="/images/img_avalie.png" width="290" height="80" />
-						<img src="/images/linha_ondeencontrar.png" width="295" height="1" style="margin-top:5px;" />
+						    <h2><%= colors.first.name%></h2>
+							<p><%= colors.first.description%></p>
+							<img src="/images/img_avalie.png" width="290" height="80" />
+							<img src="/images/linha_ondeencontrar.png" width="295" height="1" style="margin-top:5px;" />
 						
-            <table width="300" border="0" cellspacing="0" cellpadding="0">
-						  <tr>
-						    <td align="right"><img src="/images/tit_moderna.png" width="60" height="11" /></td>
-						    <td height="35" align="center" valign="bottom">
-                  <div id="moderna" class="rateit bigstars" id="rateit1" data-campo="moderna" data-rateit-starwidth="30" data-rateit-starheight="28" data-colorid="<%= colors.first.id%>" data-rateit-value="<%= colors.first.modern / colors.first.modern_total rescue 0 %>"></div>
-                </td>
-						  </tr>
-						  <tr>
-						    <td align="right" width="100"><img src="/images/tit_conservadora.png" width="91" height="11" /></td>
-						    <td height="35" align="center">
-                    <div  id="conservadora" class="rateit bigstars"  data-campo="conservadora" data-rateit-starwidth="30" data-rateit-starheight="28" data-colorid="<%= colors.first.id%>" data-rateit-value="<%= colors.first.conservative / colors.first.conservative_total rescue 0 %>"></div>                
-                </td>
-						  </tr>
-						  <tr>
-						    <td align="right"><img src="/images/tit_sexy.png" width="33" height="14" /></td>
-						    <td height="35" align="center">
-                  <div  id="sexy" class="rateit bigstars"  data-campo="sexy" data-rateit-starwidth="30" data-rateit-starheight="28" data-colorid="<%= colors.first.id%>"  data-rateit-value="<%= colors.first.sexy / colors.first.sexy_total rescue 0 %>"></div></td>
-						  </tr>
-						</table>
+							<table width="300" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+							<td align="right"><img src="/images/tit_moderna.png" width="60" height="11" /></td>
+							<td height="35" align="center" valign="bottom">
+							<div id="moderna" class="rateit bigstars" id="rateit1" data-campo="moderna" data-rateit-starwidth="30" data-rateit-starheight="28" data-colorid="<%= colors.first.id%>" data-rateit-value="<%= colors.first.modern / colors.first.modern_total rescue 0 %>"></div>
+							</td>
+							</tr>
+							<tr>
+							<td align="right" width="100"><img src="/images/tit_conservadora.png" width="91" height="11" /></td>
+							<td height="35" align="center">
+							<div  id="conservadora" class="rateit bigstars"  data-campo="conservadora" data-rateit-starwidth="30" data-rateit-starheight="28" data-colorid="<%= colors.first.id%>" data-rateit-value="<%= colors.first.conservative / colors.first.conservative_total rescue 0 %>"></div>                
+							</td>
+							</tr>
+							<tr>
+							<td align="right"><img src="/images/tit_sexy.png" width="33" height="14" /></td>
+							<td height="35" align="center">
+							<div  id="sexy" class="rateit bigstars"  data-campo="sexy" data-rateit-starwidth="30" data-rateit-starheight="28" data-colorid="<%= colors.first.id%>"  data-rateit-value="<%= colors.first.sexy / colors.first.sexy_total rescue 0 %>"></div></td>
+							</tr>
+							</table>
 
-						<img src="/images/tit_periodo.png" width="83" height="31" /><br />
-						<img src="/images/linha_ondeencontrar.png" width="295" height="1" style="margin-top:5px;" />
+							<img src="/images/tit_periodo.png" width="290" height="31" /><br />
+							<img src="/images/linha_ondeencontrar.png" width="295" height="1" style="margin-top:5px;" />
 
-						<table width="300" border="0" cellspacing="0" cellpadding="0">
-						  <tr>
-						    <td align="right"><img src="/images/tit_noite.png" width="37" height="11" /></td>
-						    <td height="35" align="center" valign="bottom">
-                  <div  id="noite" class="rateit bigstars"  data-campo="noite" data-rateit-starwidth="30" data-rateit-starheight="28" data-colorid="<%= colors.first.id%>" data-rateit-value="<%= colors.first.night / colors.first.night_total rescue 0 %>"></div>
-                </td>
-						  </tr>
-						  <tr>
-						    <td align="right" width="100"><img src="/images/tit_dia.png" width="24" height="11" /></td>
-						    <td height="35" align="center" valign="bottom">
-                    <div class="rateit bigstars"  data-campo="dia" data-rateit-starwidth="30" data-rateit-starheight="28" data-colorid="<%= colors.first.id%>"  data-rateit-value="<%= colors.first.day / colors.first.day_total rescue 0 %>"></div>                
-                </td>
-						  </tr>
-					       	</table>
+							<table width="300" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+							<td align="right"><img src="/images/tit_noite.png" width="37" height="11" /></td>
+							<td height="35" align="center" valign="bottom">
+							<div  id="noite" class="rateit bigstars"  data-campo="noite" data-rateit-starwidth="30" data-rateit-starheight="28" data-colorid="<%= colors.first.id%>" data-rateit-value="<%= colors.first.night / colors.first.night_total rescue 0 %>"></div>
+							</td>
+							</tr>
+							<tr>
+							<td align="right" width="100"><img src="/images/tit_dia.png" width="24" height="11" /></td>
+							<td height="35" align="center" valign="bottom">
+							<div class="rateit bigstars"  data-campo="dia" data-rateit-starwidth="30" data-rateit-starheight="28" data-colorid="<%= colors.first.id%>"  data-rateit-value="<%= colors.first.day / colors.first.day_total rescue 0 %>"></div>                
+							</td>
+							</tr>
+							</table>
+					
+								<!-- COMENTS-->
+							<div class="fb-comments" data-href="http://www.topbeauty.com.br<%=request.fullpath%>" data-num-posts="7" data-width="470"></div>
 					    </div>
 					</div>
-
 					<%	end
 					   end
 					%>			
 				</div>	
+			<%counter = counter + 1%>
 			<%end%>
 		</div>
 	    </div>
