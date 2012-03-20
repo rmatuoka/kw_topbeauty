@@ -1,5 +1,5 @@
 class NoticiasController < ApplicationController
-
+  before_filter :load_banners
 
   def index
   	@noticias=Post.all

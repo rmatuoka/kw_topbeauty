@@ -65,7 +65,7 @@
 			<%counter = 0%>
 			<%@categories.each do |c|%>
 				<div id="show_<%= c.id %>" <%="class = 'hide'" if counter > 0%>>
-					<p><%= c.description %></p>	
+					<!-- <p><%= c.description %></p>	-->
 					<% produto = c.products.first
 					   if !produto.blank?
 					   	colors = produto.colors.all

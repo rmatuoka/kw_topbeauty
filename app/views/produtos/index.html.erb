@@ -11,7 +11,11 @@
                 <p>Divididos em diversas linhas, cada produto traz características únicas, que podem expressar e valorizar as mais variadas personalidades. Aqui, você com certeza encontrará produtos que traduzem seu estilo.</p>
                 
 		<%@lines.each do |l|%>
-			<%=link_to(image_tag(l.imgline.url("medium"), :style => "margin-bottom:20px; margin-top:20px;"), produto_path(l))%>
+			<%if l.id == 3%>
+				<%=link_to(image_tag(l.imgline.url("medium"), :style => "margin-bottom:20px; margin-top:20px;"), "http://www.segredosdeadriane.com.br", :target => "new")%>
+			<%else%>
+				<%=link_to(image_tag(l.imgline.url("medium"), :style => "margin-bottom:20px; margin-top:20px;"), produto_path(l))%>
+			<%end%>
 		<%end%>
 		
             </div>
