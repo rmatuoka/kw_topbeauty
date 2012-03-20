@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+
 @font-face {
     font-family: 'AkkoRoundedStd-Light';9c678a
     src: url('../fonts/akkoroundedstd-light.eot');
@@ -49,17 +48,17 @@ body{
 	background-color:#FFFFFF !important;
 	text-align:center;
 	}
-
+div { }
 #section{
-	position:relative;
+	position:relative;	
 	}
 
 #header{
 	position:absolute;
 	width:960px;
-    left:50%;
-    margin-left:-480px;
-	margin-top:-10px !important;
+    	left:50%;
+	top:70px;
+    	margin-left:-480px;
 	z-index:3000;
 	}
 
@@ -97,12 +96,15 @@ body{
 	}
 
 #slider{
-	position:absolute;
+	position:relative;
 	width:100% !important;
 	z-index:1000;
+	height:690px;
 	}
 
 #slideshow{
+	position:absolute;
+	top:0px;
 	margin:0 auto;
 	width:100% !important;
 	}
@@ -189,7 +191,8 @@ body{
 	background-image:url('../images/bg_navslider.png');
 	background-position:left top;
 	background-repeat:repeat-x;
-	position:absolute; 
+	position:absolute;
+	top:620px; 
 	z-index:2000;
 	height:30px;
 	padding-top:11px;
@@ -218,26 +221,59 @@ body{
 	background-position:center top;
 	background-repeat:no-repeat;
 	height:auto;
-	min-height:300px;
+	min-height:500px;
 	width:100%;
-	position:absolute;
-	top:700px;
+	position:relative;
 	}
 
 #body_top{
+	position:relative;
 	width:970px;
 	margin:0 auto;
 	text-align:left;
+	
 	}
 	
 #esmalte-do-dia{
-	margin-top:60px;
+	position:relative;
+	margin-top:0px;
 	width:645px;
-	float:left;
+	height:320px;
+	display:inline-block !important;
+	vertical-align:top !important;
+	margin-top:77px !important;
+}
+
+#vsh{
+	position:relative;
+	top:0px;
+	width:310px !important;
+	display:inline-block !important;
+	vertical-align:top !important;
+	margin-top:77px !important;
+}
+	
+#top-vsh{
+	width:320px;
+	}
+
+#body-vsh{
+	margin-top:18px;
+	width:320px;
+	}
+
+#footer-vsh{
+	margin-top:5px;
+	padding-top:4px;
+	background-image:url('../images/bg_redes_edd.png');
+	background-repeat:no-repeat;
+	width:320px;
+	height:24px;
+	text-align:right;
 	}
 
 #edd-top{
-	margin-top:10px;
+
 	}
 
 #edd-top h1{
@@ -250,6 +286,7 @@ body{
 
 #edd-body{
 	margin-top:20px;
+	background:red;
 	}
 	
 #edd{
@@ -310,39 +347,17 @@ body{
 	}
 	
 
-#vsh{
-	margin-top:70px;
-	float:right;
-	width:320px;
-	}
-	
-#top-vsh{
-	
-	}
-
-#body-vsh{
-	margin-top:18px;
-	}
-
-#footer-vsh{
-	margin-top:5px;
-	padding-top:4px;
-	background-image:url('../images/bg_redes_edd.png');
-	background-repeat:no-repeat;
-	width:320px;
-	height:24px;
-	text-align:right;
-	}
 
 #body_footer{
+	position:relative;
 	width:970px;
+	height:200px;
 	margin:0 auto;
-	margin-top:380px;
+	margin-top:0px;
 	}
 
 #body_footer img{
 	float:left;
-	margin-top:-20px;
 	}
 
 #body_footer a{
@@ -377,6 +392,7 @@ body{
 	font-size:20px;
 	margin-top:10px;
 	margin-left:20px;
+	position:relative;
 	}
 
 .noticia p{
@@ -403,26 +419,28 @@ body{
 .footer_noticias{
 	position:absolute;
 	width:318px;
-	top:340px;
+	top:320px;
 	left:0px;
 	padding-top:4px;
 	background-image:url('../images/bg_redes_edd.png');
 	background-repeat:no-repeat;
 	height:24px;
 	text-align:right;
+	z-index:5000;
 	}
 
 #footer{
 	background-image:url('../images/bg_footer.jpg');
 	background-position:center top;
 	background-repeat:no-repeat;
-	height:573px;
+	height:373px;
 	width:100%;
-	position:absolute;
-	top:1180px;
+	position:relative;
+	margin-top:50px;
 	}
 
 #footer-top{
+	
 	width:970px;
 	margin:0 auto;
 	}
@@ -473,17 +491,17 @@ body{
 	background-image:url('../images/bg_footer_footer.png');
 	background-position:center top;
 	background-repeat:no-repeat;
+	position:relative;
+	top:240px;
 	width:965px;
 	height:57px;
 	margin:0 auto;
-	margin-top:250px;
+
 	}
 
 #footer-footer a img{
-	float:right;
-	margin-right:10px;
-	margin-top:17px;
+	position:relative;
+margin-right:7px;
 	}
 .clear{clear:both}
 }
->>>>>>> e3c72eab5debb153100c8a58275d4018c14aeee8

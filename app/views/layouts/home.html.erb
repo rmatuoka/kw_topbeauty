@@ -9,7 +9,6 @@ jQuery.noConflict();
 </script>
 <%=stylesheet_link_tag "reset.css" %>
 <%=stylesheet_link_tag "geral.css" %>
-<%= stylesheet_link_tag "noticias.css" %>
 <%=stylesheet_link_tag "../javascripts/fancybox/jquery.fancybox.css" %>
 <%=stylesheet_link_tag "slider.css" %>
 <%=javascript_include_tag  "jcycle.js" %>
@@ -118,7 +117,7 @@ jQuery(document).ready(function() {
 </script>
 <script>
 	jQuery(function() {
-		jQuery("a.Swap")
+		jQuery("div.Swap")
 			.mouseover(function() { 
 				var src = jQuery(this).find(".Swapimg").attr("src").replace("mediumpb/", "medium/");
 			jQuery(this).find(".Swapimg").attr("src", src);
@@ -372,21 +371,20 @@ O brilho e astral da cidade são representados pelas partículas super grandes d
         </div>
 	
         <div id='body_footer'>
-	<div style="display:block; position:relative; text-align:left; width:960px; height:28px;"><img src="images/tit-noticias.png" width="116" height="27" style="position:absolute; left:0px !important; " /></div><br />
-            <%@noticias.each do|n|%>
- 	    <a href="<%= noticia_path(n)%>" target="_self" class="Swap" >
-        	<div class="noticia"> 
-		    	<div><%= image_tag n.image.url(:mediumpb), :class=>"Swapimg" %></div>
-		        <p><%= n.created_at.strftime('%d/%m/%Y')%></p>
-		        <h1><%= strip_tags(n.description.slice(0,70))%></h1>
-				</a>
-		        <span class="footer_noticias"><a href="http://twitter.com/share" class="twitter-share-button" data-count="none" data-via="SeuTwitter" rel="nofollow">
-						Tweet
-					</a>
-					<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
-					<iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.topbeautycosmeticos.com.br&amp;send=false&amp;layout=button_count&amp;width=60&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font=tahoma&amp;height=21&amp;appId=228638123874618" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:20px;" allowTransparency="true"></iframe></span>
+	    <div style="display:block; position:relative; text-align:left; width:960px; height:28px;"><img src="images/tit-noticias.png" width="116" height="27" style="position:absolute; left:0px !important; " /></div><br />
+                <%@noticias.each do|n|%>
+     	    <div onclick="window.location.href='<%= noticia_path(n)%>'" class="Swap" style="cursor:pointer;" >
+            	<div class="noticia"> 
+		        	<div><%= image_tag n.image.url(:mediumpb), :class=>"Swapimg" %></div>
+		            <p></p>
+		            <h1><%= strip_tags(n.description.slice(0,70))%></h1>
+			
+		            <span class="footer_noticias"><a href="http://twitter.com/share" class="twitter-share-button" data-count="none" data-via="SeuTwitter" rel="nofollow">Tweet</a>
+					    <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+					    <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.topbeautycosmeticos.com.br&amp;send=false&amp;layout=button_count&amp;width=60&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font=tahoma&amp;height=21&amp;appId=228638123874618" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:20px;" allowTransparency="true"></iframe></span>
                 </div>
-            <%end%>
+			</div>
+			<%end%>
 
         </div>
     </div>

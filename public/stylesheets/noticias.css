@@ -8,14 +8,14 @@ body{
 
 #article-noticias{
 	width:100%;
-	position:absolute;
-	top:0px !important;
+	position:relative;
+	top:300px;
 	}
 
 #body_footer{
 	width:970px;
 	margin:0 auto;
-	margin-top:350px;
+	margin-top:30px;
 	}
 
 #body_footer img{
@@ -41,6 +41,7 @@ body{
 	}
 
 .noticia div{
+	position:relative;
 	margin-left:8px;
 	margin-top:5px;
 	width:304px;
@@ -85,6 +86,5 @@ body{
 	position:absolute;
 	width:318px;
 	height:28px;
-	top:320px;
 	left:0px;
 	}

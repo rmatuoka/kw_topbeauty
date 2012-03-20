@@ -3,7 +3,7 @@
 	<%= stylesheet_link_tag "noticias.css" %>
 	<script>
 	jQuery(function() {
-		jQuery("a.Swap")
+		jQuery("div.Swap")
 			.mouseover(function() { 
 				var src = jQuery(this).find(".Swapimg").attr("src").replace("mediumpb/", "medium/");
 			jQuery(this).find(".Swapimg").attr("src", src);
@@ -24,25 +24,31 @@ $contador =0
 	<div id='body_footer'>
 	<%@noticias.each do|noticiashow|%>
 		<% if $contador != 2 %>
-			<a href="<%= noticia_path(noticiashow)%>" target="_self" class="Swap">
+			<div onclick="window.location.href='<%= noticia_path(noticiashow)%>'" style="cursor:pointer;" class="Swap">
 			<div class="noticia" <%=raw 'style=" margin-top:50px;"' if ($div > 2)%>>
 				<div><%= image_tag noticiashow.image.url(:mediumpb), :class=>"Swapimg" %></div>
 				<p><%= noticiashow.created_at.strftime('%d/%m/%Y')%></p>
 				<h1><%= strip_tags(noticiashow.description.slice(0,70))%></h1>
-				<span class="footer_noticias"><img src="images/bg_noticias_footer.png" width="318" height="28"></span>				
+				<span class="footer_noticias"><a href="http://twitter.com/share" class="twitter-share-button" data-count="none" data-via="SeuTwitter" rel="nofollow">Tweet</a>
+					    <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+					    <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.topbeautycosmeticos.com.br&amp;send=false&amp;layout=button_count&amp;width=60&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font=tahoma&amp;height=21&amp;appId=228638123874618" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:20px;" allowTransparency="true"></iframe></span>			
 			</div>
-			</a>
+			</div>
 		<%  $contador = $contador +1
 			$div = $div +1
 			else %>
-			<a href="<%= noticia_path(noticiashow)%>" target="_self" class="Swap">
+			<div onclick="window.location.href='<%= noticia_path(noticiashow)%>'" style="cursor:pointer;" class="Swap">
 			<div class="noticia" <%=raw 'style=" margin-top:50px;"' if $div > 2%>>
 				<div><%= image_tag noticiashow.image.url(:mediumpb), :class=>"Swapimg" %></div>
 				<p><%= noticiashow.created_at.strftime('%d/%m/%Y')%></p>
 				<h1><%= strip_tags(noticiashow.description.slice(0,70))%></h1>
-				<span class="footer_noticias"><img src="images/bg_noticias_footer.png" width="318" height="28"></span>
+				<span class="footer_noticias">
+              <a href="http://twitter.com/share" class="twitter-share-button" data-count="none" data-via="SeuTwitter" rel="nofollow">Tweet</a>
+					    <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+					    <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.topbeautycosmeticos.com.br&amp;send=false&amp;layout=button_count&amp;width=60&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font=tahoma&amp;height=21&amp;appId=228638123874618" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:20px;" allowTransparency="true"></iframe></span>
+
 			</div>
-			</a>
+			</div>
 		</div>
 		<div id='body_footer'>
 		<%  $contador = 0

@@ -1,24 +1,38 @@
+
+#header{
+	position:absolute;
+	width:960px;
+    	left:50%;
+	top:0px;
+    	margin-left:-480px;
+	margin-top:-10px !important;
+	z-index:3000;
+	}
 #article{
 	background-image:url('../images/bg_internas.jpg') !important;
-	top:0px !important;
+	background-position:center top;
+	position:relative;	
+	top:-16px !important;
 	}
 
 #interna{
+	position:relative;
 	width:970px;
 	margin:0 auto;
+	top:300px;
 	}
 
 #int-esquerda{
 	width:620px;
 	float:left;
 	text-align:left;
-	margin-top:300px;
+	margin-top:0px;
 	}
 
 #int-direita{
 	width:319px;
 	float:right;
-	margin-top:200px;
+	margin-top:0px;
 	text-align:left;
 	}
 
@@ -118,6 +132,10 @@
 	font-weight:normal;
 	font-size:15px;
 	}
+#footer
+{
+	margin-top:315px;
+}
 .clear
 {
  clear:both
