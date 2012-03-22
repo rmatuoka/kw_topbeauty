@@ -67,34 +67,34 @@ jQuery(document).ready(function() {
 				<%= f.hidden_field :contact_type %>
 				<table width="460" border="0" cellspacing="0" cellpadding="0">
 				  <tr>
-					<td><img src="images/lb_nome_completo.png" width="105" height="14" /></td>
+					<td><img src="images/lb_nome_completo.png" width="105" height="14" class="Align_tit" /></td>
 				  </tr>
 				  <tr>
 					<td><%=f.text_field :name , :class=>"input" %></td>
 				  </tr>
 				  <tr>
-					<td><img src="images/lb_email.png" width="44" height="11" /></td>
+					<td><img src="images/lb_email.png" width="44" height="11" class="Align_tit" /></td>
 				  </tr>
 				  <tr>
 					<td><%=f.text_field :email , :class=>"input" %></td>
 				  </tr>
 				  <tr>
-					<td><img src="images/lb_empresa.png" width="58" height="14" /></td>
+					<td><img src="images/lb_empresa.png" width="58" height="14" class="Align_tit"  /></td>
 				  </tr>
 				  <tr>
 					<td><%=f.text_field :company , :class=>"input" %></td>
 				  </tr>
 				  <tr>
-					<td><img src="images/lb_telefone.png" width="60" height="11" /></td>
+					<td><img src="images/lb_telefone.png" width="60" height="11" class="Align_tit"  /></td>
 				  </tr>
 				  <tr>
 					<td><%=f.text_field :phone , :class=>"input" %></td>
 				  </tr>
 				  <tr>
-					<td><img src="images/lb_mensagem.png" width="73" height="14" /></td>
+					<td><img src="images/lb_mensagem.png" width="73" height="14" class="Align_tit"  /></td>
 				  </tr>
 				  <tr>
-					<td><%=f.text_area(:message,:rows=>"10")%></td>
+					<td><%=f.text_area(:message,:rows=>"10", :style=>"margin-left:-1px;")%></td>
 				  </tr>
 				  <tr>
 					<td valign="bottom"><%= f.check_box :receive %>

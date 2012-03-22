@@ -33,7 +33,15 @@
 	border:1px solid transparent;
 	margin-bottom:5px;
 	padding-left:10px;
+	font-family: 'Radley';
+	color:#808080;
+	font-weight:normal;
+	font-size:20px;
 	}
+.Align_tit
+{
+	margin-left:3px !important;
+}
 
 #form_direita textarea{
 	background-image:url('../images/bg_txtfield.png');
@@ -61,3 +69,20 @@
 	cursor:pointer;
 	float:right;
 	}
+
+/* --------------Mensagens de erro CSS------------*/
+ input.error
+{
+	font-family: 'Radley';
+	color:red;
+	font-weight:normal;
+	font-size:20px;	
+}
+.error
+{
+	font-family: 'Radley';
+	color:red;
+	font-weight:normal;
+	font-size:18px;	
+}
+

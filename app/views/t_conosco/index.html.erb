@@ -47,34 +47,34 @@
 <%= form_for @contato, :url=>"t_conosco", :html=>{:id=>"form_direita",:multipart => true} do |f| %>
 		<table width="460" border="0" cellspacing="0" cellpadding="0" <%= "class='hide'" if !flash[:notice].blank?%>>
 		  <tr>
-			<td><img src="images/lb_nome_completo.png" width="105" height="14" /></td>
+			<td><img src="images/lb_nome_completo.png" width="105" height="14" class="Align_tit"  /></td>
 		  </tr>
 		  <tr>
 			<td><%=f.text_field :name , :class=>"input" %></td>
 		  </tr>
 		  <tr>
-			<td><img src="images/lb_email.png" width="44" height="11" /></td>
+			<td><img src="images/lb_email.png" width="44" height="11" class="Align_tit" /></td>
 		  </tr>
 		  <tr>
 			<td><%=f.text_field :email , :class=>"input" %></td>
 		  </tr>
 		  <tr>
-			<td><img src="images/lb_curriculum.png" width="108" height="11" /></td>
+			<td><img src="images/lb_curriculum.png" width="108" height="11" class="Align_tit"  /></td>
 		  </tr>
 		  <tr>
 			<td><%= f.file_field :curriculum %><br /><br /></td>
 		  </tr>
 		  <tr>
-			<td><img src="images/lb_telefone.png" width="60" height="11" /></td>
+			<td><img src="images/lb_telefone.png" width="60" height="11" class="Align_tit"  /></td>
 		  </tr>
 		  <tr>
 			<td><%=f.text_field :phone , :class=>"input" %></td>
 		  </tr>
 		  <tr>
-			<td><img src="images/lb_mensagem.png" width="73" height="14" /></td>
+			<td><img src="images/lb_mensagem.png" width="73" height="14" class="Align_tit"  /></td>
 		  </tr>
 		  <tr>
-			<td><%=f.text_area(:message,:rows=>"10")%></td>
+			<td><%=f.text_area(:message,:rows=>"10",:style=>"margin-left:-1px;")%></td>
 		  </tr>
 		  <tr>
 			<td><%=image_submit_tag("bt_enviar.png", :alt=>"Enviar", :title=>"Enviar", :class=>"botao") %></td>
