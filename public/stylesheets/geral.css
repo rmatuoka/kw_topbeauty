@@ -432,7 +432,7 @@ div { }
 	background-repeat:no-repeat;
 	height:24px;
 	text-align:right;
-	z-index:5000;
+	z-index:3000;
 	}
 
 #footer{
