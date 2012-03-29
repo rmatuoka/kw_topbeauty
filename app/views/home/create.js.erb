@@ -1,0 +1,6 @@
+<% if @erro %>
+  alert('Ocorreu um erro! Tente novamente!'); 
+<% else %>
+  alert('Email Cadastrado com sucesso!'); 
+  jQuery("#newsletter_email").val('');
+<% end %>

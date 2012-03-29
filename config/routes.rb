@@ -1,4 +1,6 @@
 KwTopbeauty::Application.routes.draw do
+  namespace(:admin){ resources :newsletters }
+
   resources :noticias
   resources :produtos do
   	collection do
@@ -73,7 +75,8 @@ KwTopbeauty::Application.routes.draw do
   match 'empresa' => "static_contents#empresa" 
   match 'politica_de_privacidade' => "static_contents#politica_de_privacidade" 
   match 'termos_de_uso' => "static_contents#termos_de_uso" 
-
+  match 'novo' => "home#create"
+ 
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

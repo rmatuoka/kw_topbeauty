@@ -1,6 +1,6 @@
 <div id='int-direita'>
 	<div id='int-dica'>
-		<img src="images/tit_dica_int.png" width="270" height="27" /><br />
+		  <%= image_tag("tit_dica_int.png", :width=>"270", :height=>"27") %><br />
 		<div id='dica_dia'>
 			<%=image_tag(@banner.imgbanner.url(:medium)) if !@banner.blank?%>
 			<!-- <img src="images/img_dica.png" width="223" height="248" /> -->
@@ -8,7 +8,7 @@
 		</div>
 	</div>
 	<div id='int-vsh'>
-		<a href="/assistente" class="various fancybox.iframe"><img src="images/tit_vsh_int.png" width="262" height="40" /></a><br />
+		<a href="/assistente" class="various fancybox.iframe"><%= image_tag("tit_vsh_int.png", :width=>"262", :height=>"40" ) %></a><br />
 		<div id="vai_sair_top">
 			<a href="/assistente" class="various fancybox.iframe" style="text-decoration:none;"><h3>Conte com a ajuda de nossa <b>assistência</b> para fazer a escolha certa!</h3></a>
 		</div>

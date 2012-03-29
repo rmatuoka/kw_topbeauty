@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120317000654) do
+ActiveRecord::Schema.define(:version => 20120329143631) do
 
   create_table "banners", :force => true do |t|
     t.text     "texto"
@@ -53,6 +53,7 @@ ActiveRecord::Schema.define(:version => 20120317000654) do
     t.string   "imghand_content_type"
     t.integer  "imghand_file_size"
     t.datetime "imghand_updated_at"
+    t.text     "tip"
     t.decimal  "modern",                  :precision => 10, :scale => 0, :default => 0
     t.integer  "modern_total",                                           :default => 0
     t.decimal  "conservative",            :precision => 10, :scale => 0, :default => 0
@@ -90,6 +91,12 @@ ActiveRecord::Schema.define(:version => 20120317000654) do
     t.string   "imgline_content_type"
     t.integer  "imgline_file_size"
     t.datetime "imgline_updated_at"
+  end
+
+  create_table "newsletters", :force => true do |t|
+    t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "posts", :force => true do |t|

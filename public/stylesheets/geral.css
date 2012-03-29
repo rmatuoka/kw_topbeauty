@@ -493,7 +493,21 @@ div { }
 	margin-top:20px;
 	text-align:left;
 	}
+#Box_newsletter
+{
 	
+}
+	#newsletter_email
+	{
+		background-image:url(/images/bg_form_newsletter.png);
+		background-color:transparent; 
+		background-repeat:no-repeat; 
+		width:274px; 
+		height:37px; 
+		border:1px solid transparent; 
+		padding-left:10px; 
+		margin-right:45px;	
+	}	
 #footer-footer{
 	background-image:url('../images/bg_footer_footer.png');
 	background-position:center top;
