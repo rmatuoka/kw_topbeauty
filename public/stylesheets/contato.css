@@ -1,11 +1,14 @@
+
 #base_formulario{
-	background-image:url('../images/bg_fancybox.png');
+	position:relative;
+	background-image:url('../images/bg_fancybox_trans.png');
 	background-position:center top;
 	background-repeat:no-repeat;
-	
+	min-width:600px !important;
 	}
 
 #form_esquerda{
+	position:relative;
 	float:left;
 	margin-top:15px;
 	margin-left:0px;
@@ -13,13 +16,42 @@
 	height:530px;
 	
 	}
-
+	#Right_imprensa 
+	{
+		position:relative;
+		float:left;
+		margin-top:58px;
+		margin-left:90px;
+		font-family: 'Radley';
+		color:#808080;
+		font-weight:normal;
+		font-size:15px;		
+		text-align:justify;
+		line-height:20px;
+	}
+	.Text_purple
+	{
+		font-family: 'Radley';
+		color:#9f5284;
+		font-weight:normal;
+		font-size:15px;
+	}
 #form_direita{
-	float:right;
+	position:relative;
+	float:left;
+	margin-left:90px;
 	margin-top:15px;
 	margin-right:0px;
 	}
+.Duvidas
+{
+margin-bottom:5px; margin-top:20px; cursor:pointer;
+	}
 
+.Comercial
+{
+margin-bottom:5px;
+}
 #form_direita img{
 	margin-bottom:5px;
 	}

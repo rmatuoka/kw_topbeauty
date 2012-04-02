@@ -5,15 +5,22 @@
 	<%=javascript_include_tag  "meusmetodos.js" %>
 <script>
 jQuery(document).ready(function() {
-	jQuery('.duvidas').click(function(){
+	jQuery('.Duvidas').click(function(){
+    jQuery('#Right_imprensa').addClass('hide');
 		jQuery('#form_direita').removeClass('hide');
 		jQuery('#form_show_msg').addClass('hide');
 		jQuery('#contact_contact_type').val('1');
 		})
-	jQuery('.comercial').click(function(){
+	jQuery('.Comercial').click(function(){
+    jQuery('#Right_imprensa').addClass('hide');
 		jQuery('#form_direita').removeClass('hide');
 		jQuery('#form_show_msg').addClass('hide');
 		jQuery('#contact_contact_type').val('2');
+		})
+	jQuery('.Imprensa').click(function(){
+    jQuery('#form_direita').addClass('hide');
+		jQuery('#Right_imprensa ').removeClass('hide');
+		jQuery('#form_show_msg').addClass('hide');
 		})
 });
 </script>
@@ -59,8 +66,10 @@ jQuery(document).ready(function() {
 <%end%>
 <div id='form_esquerda'>
 	<img src="images/img_contato.png" width="248" height="175" style="margin-right:20px; " /><br />
-	<img src="images/bt_duvidasesugestoes.png" width="240" height="38" style="margin-bottom:5px; margin-top:20px; cursor:pointer;" class="duvidas" /><br />
-	<img src="images/bt_comercial.png" width="240" height="38" style="cursor:pointer;" class="comercial" />
+	<img src="images/bt_duvidasesugestoes.png" width="240" height="38"  class="Duvidas" /><br />
+	<img src="images/bt_comercial.png" width="240" height="38" style="cursor:pointer;" class="Comercial" /><br />
+  <img src="images/bt_imprensa.png" width="240" height="38" style="cursor:pointer;" class="Imprensa" />
+
 </div>
 <%= raw ("<div id='form_show_msg' >" + flash[:notice] + "</div>") if !flash[:notice].blank?%>
 <%= form_for @contato, :url=>"contato", :html=>{:id=>"form_direita", :class=>"hide"} do |f| %>
@@ -106,6 +115,12 @@ jQuery(document).ready(function() {
 				  </tr>
 				</table>
 <% end %>
-			
+<div id="Right_imprensa" class="hide" >
+  <p>
+    <span class="Text_purple">Ana Carolina Baili</span> - Semilla Comunicação<br />
+    <span class="Text_purple">Telefone:</span> (11) 9674-6289<br />
+    <span class="Text_purple">Email:</span> semillacomunicacao@ymail.com
+  </p>
+</div>			
 			
 </div>			
