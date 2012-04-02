@@ -32,6 +32,7 @@
 			<img src="/images/tit-cadastrese.png" width="98" height="15" />
 			
       <div id="Box_newsletter">
+      <% @newsletter = Newsletter.new %>
       <%= form_for @newsletter, :url => novo_path, :remote =>true do |f| %>
         <%= f.error_messages %>
         <p><%= f.label :email,"Para receber nossa newsletter!" %></p>

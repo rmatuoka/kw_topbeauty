@@ -3,7 +3,6 @@ class HomeController < ApplicationController
   layout "home"
   def index
 	  @noticias = Post.all(:limit => 3)
-    @newsletter = Newsletter.new
   end
   def create
     @newsletter = Newsletter.new(params[:newsletter])
