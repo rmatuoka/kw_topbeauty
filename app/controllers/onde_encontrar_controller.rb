@@ -19,7 +19,11 @@ class OndeEncontrarController < ApplicationController
     
     @Resultados.each do |r|
       @retorno += "<div id='ond_um' class='onde'>"
-      @retorno += "     <h3>#{r.name}</h3>"
+      if r.fantasy_name.blank?
+        @retorno += "     <h3>#{r.name}</h3>"
+      else
+        @retorno += "     <h3>#{r.fantasy_name}</h3>"
+      end
       @retorno += "     <p>#{r.address}, #{r.number}</p>"
       @retorno += "     <p>#{r.city} - #{r.state}</p>"
       @retorno += "     <p>#{r.phone}</p>"
