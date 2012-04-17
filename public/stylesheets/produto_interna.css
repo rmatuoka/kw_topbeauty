@@ -85,7 +85,8 @@
 #Pallete_box
 {
 	width:171px;
-	height:51px;
+	min-height:51px;
+	height:auto;
 }
 #Pallete_box img
 {
