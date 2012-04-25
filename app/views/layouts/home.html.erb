@@ -14,10 +14,10 @@ jQuery.noConflict();
 <%=javascript_include_tag  "jcycle.js" %>
 <%=javascript_include_tag  "easing.js" %>
 <%=javascript_include_tag  "fancybox/jquery.fancybox.js" %>
+
 <script>
 jQuery(document).ready(function() {
 	
-	//------------
 	var request = jQuery.ajax({
 	  url: "/preloader/slides",
 	  type: "GET",
@@ -44,8 +44,7 @@ jQuery(document).ready(function() {
 	request.fail(function(jqXHR, textStatus) {
 	  alert( "Request failed: " + textStatus );
 	});
-	
-	//------------
+
 	jQuery(".fancybox").fancybox();
 	jQuery(".various").fancybox({
 		maxWidth	: 960,
@@ -133,8 +132,8 @@ jQuery(document).ready(function() {
 		jQuery('#box_adriane_on').slideToggle('slow').addClass('hide');
 		jQuery('#box_adriane_off').slideToggle('slow').removeClass('hide');
 	});
-});
 
+});
 </script>
 <script>
 	jQuery(function() {
@@ -150,13 +149,12 @@ jQuery(document).ready(function() {
 	});
 </script>
 </head>
-
 <body>
 <div id='section'>
 	<%= render :file =>"layouts/_header.html.erb" %>
     <div id='slider'>
     	<div id='slideshow'>
-            <img src="/images/star_2.gif">
+            <img src="/images/ajax-loader.gif">
         </div>
         <div id='nav_control'>
         	<div id='nav'></div>
