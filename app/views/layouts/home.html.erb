@@ -14,8 +14,10 @@ jQuery.noConflict();
 <%=javascript_include_tag  "jcycle.js" %>
 <%=javascript_include_tag  "easing.js" %>
 <%=javascript_include_tag  "fancybox/jquery.fancybox.js" %>
+
 <script>
 jQuery(document).ready(function() {
+	
 	jQuery(".fancybox").fancybox();
 	jQuery(".various").fancybox({
 		maxWidth	: 960,
@@ -112,8 +114,8 @@ jQuery(document).ready(function() {
 		jQuery('#box_adriane_on').slideToggle('slow').addClass('hide');
 		jQuery('#box_adriane_off').slideToggle('slow').removeClass('hide');
 	});
-});
 
+});
 </script>
 <script>
 	jQuery(function() {
@@ -129,13 +131,12 @@ jQuery(document).ready(function() {
 	});
 </script>
 </head>
-
 <body>
 <div id='section'>
 	<%= render :file =>"layouts/_header.html.erb" %>
     <div id='slider'>
     	<div id='slideshow'>
-            <div id="slide1">
+            <div id="slide1" class="slide1" onload='document.getElementById("loading").style.display="none";'>
                 <div id='elementos-nature'>
                     <div id='logo-nature'>
                         <img src="images/logo_nature.png" border="0" width="419" height="69" />
@@ -143,7 +144,7 @@ jQuery(document).ready(function() {
                     <div id='esmalte-nature'>
                         <img src="images/esmaltes_nature.png" border="0" width="548" height="298" />
                     </div>
-                    <div id='garota-nature'>
+                    <div id='garota-nature' >
                         <img src="images/garota_nature.png" border="0" width="1102" height="692" />
                     </div>
                 </div>

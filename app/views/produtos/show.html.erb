@@ -3,7 +3,38 @@
 <%=stylesheet_link_tag "produto_interna.css" %>
 <%=stylesheet_link_tag "rating/rateit.css" %>
 <%=stylesheet_link_tag "rating/shCore.css" %>
+<script type="text/javascript">
+	$(function () {
+		$('img').hide();//hide all the images on the page
+	});
 
+	var i = 0;//initialize
+	var int=0;//Internet Explorer Fix
+	$(window).bind("load", function() {//The load event will only fire if the entire page or document is fully loaded
+		var int = setInterval("doThis(i)",500);//500 is the fade in speed in milliseconds
+	});
+
+	function doThis() {
+		var images = $('img').length;//count the number of images on the page
+		if (i >= images) {// Loop the images
+			clearInterval(int);//When it reaches the last image the loop ends
+		}
+		$('img:hidden').eq(0).fadeIn(500);//fades in the hidden images one by one
+		i++;//add 1 to the count
+	}
+</script>
+<style>
+.image-holder{
+	float:left;
+	width:500px;
+	height:313px;
+	padding:10px;
+	margin:10px;
+	border:1px solid #ddd;
+	background:#eee url(images/ajax-loader.gif) 50% 50% no-repeat;
+	display:inline;
+}
+</style>
 <script>
 	function ShowBox(cod){
 	  jQuery("#Main_slider > div").addClass("hide");
@@ -72,7 +103,7 @@
 							%>
 							<div id='produto'>
 								<div id='prod-esquerda'>
-									<div id='img-produto'>
+									<div id='img-produto' class="image-holder">
 										<%= image_tag colors.first.imgenamel.url, :id => "img_prod", :width => "120"%>
 									</div>
 									<img src="/images/tit_veja_ampliado.png" style="margin-top:10px; margin-bottom:10px;"/><br />
