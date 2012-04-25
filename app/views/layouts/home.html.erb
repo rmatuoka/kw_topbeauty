@@ -16,6 +16,36 @@ jQuery.noConflict();
 <%=javascript_include_tag  "fancybox/jquery.fancybox.js" %>
 <script>
 jQuery(document).ready(function() {
+	
+	//------------
+	var request = jQuery.ajax({
+	  url: "/preloader/slides",
+	  type: "GET",
+	  //data: {id : menuId},
+	  dataType: "html"
+	});
+
+	request.done(function(msg) {
+	  	//alert("carregou");
+		jQuery('#slideshow').html(msg)
+		jQuery('#slideshow') 
+		.cycle({ 
+			fx:     'scrollLeft', 
+			speed:  'slow', 
+			timeout: 6000,
+	    	speedIn: 1500,
+			speedOut: 7500,
+	    	easeIn: 'easeInOutCirc',
+			pager:  '#nav'
+		});
+		//$("#log").html( msg );
+	});
+
+	request.fail(function(jqXHR, textStatus) {
+	  alert( "Request failed: " + textStatus );
+	});
+	
+	//------------
 	jQuery(".fancybox").fancybox();
 	jQuery(".various").fancybox({
 		maxWidth	: 960,
@@ -28,16 +58,7 @@ jQuery(document).ready(function() {
 		openEffect	: 'none',
 		closeEffect	: 'none'
 	});
-    jQuery('#slideshow') 
-	.cycle({ 
-		fx:     'scrollLeft', 
-		speed:  'slow', 
-		timeout: 6000,
-    	speedIn: 1500,
-		speedOut: 7500,
-    	easeIn: 'easeInOutCirc',
-		pager:  '#nav'
-	});
+    
 	jQuery('.bt_box_nature_on').click(function(){
 		jQuery('#box_nature_off').slideToggle('slow').addClass('hide');
 		jQuery('#box_nature_on').slideToggle('slow').removeClass('hide');
@@ -135,194 +156,7 @@ jQuery(document).ready(function() {
 	<%= render :file =>"layouts/_header.html.erb" %>
     <div id='slider'>
     	<div id='slideshow'>
-            <div id="slide1">
-                <div id='elementos-nature'>
-                    <div id='logo-nature'>
-                        <img src="images/logo_nature.png" border="0" width="419" height="69" />
-                    </div>
-                    <div id='esmalte-nature'>
-                        <img src="images/esmaltes_nature.png" border="0" width="548" height="298" />
-                    </div>
-                    <div id='garota-nature'>
-                        <img src="images/garota_nature.png" border="0" width="1102" height="692" />
-                    </div>
-                </div>
-                <div id='box_nature'>
-                    <div id='box_nature_off' class="hide">
-                        <a href="#" class="bt_box_nature_on"><img src="images/bt_box_slider_on.png" /></a>
-						<img src="images/ch_nature.png" />
-                    </div>
-                    <div id='box_nature_on'>
-                        <a href="#" class="bt_box_nature_off"><img src="images/bt_box_slider_off.png" /></a>
-						<img src="images/ch_nature.png" />
-						<img src="images/ch_nature_txt.png" style="margin-top:25px;"/>
-						<a href="http://www.topbeauty.com.br/produtos/7"><img src="images/bt_box_slider_mais.png"  style="float:right; margin-right:20px;" border="0"/></a>
-                    </div>
-                </div>
-            </div>
-            <div id="slide2">
-                <div id='elementos-glitter'>
-                    <div id='logo-glitter'>
-                        <img src="images/logo_glitter.png" border="0" width="573" height="134" />
-                    </div>
-                    <div id='esmalte-glitter'>
-                        <img src="images/esmaltes_glitter.png" border="0" width="401" height="329" />
-                    </div>
-                    <div id='garota-glitter'>
-                        <img src="images/garota_glitter.png" border="0" width="558" height="664" />
-                    </div>
-                </div>
-                <div id='box_glitter'>
-                    <div id='box_glitter_off' class="hide">
-                        <a href="#" class="bt_box_glitter_on"><img src="images/bt_box_slider_on.png" /></a>
-						<img src="images/ch_glitter.png" />
-                    </div>
-                    <div id='box_glitter_on'>
-                        <a href="#" class="bt_box_glitter_off"><img src="images/bt_box_slider_off.png" /></a>
-						<img src="images/ch_glitter.png" />
-						<img src="images/ch_glitter_txt.png" style="margin-top:25px;"/>
-						<a href="http://www.topbeauty.com.br/produtos/6"><img src="images/bt_box_slider_mais.png"  style="float:right; margin-right:20px;" border="0"/></a>
-                    </div>
-                </div>
-            </div>
-            <div id="slide3">
-                <div id='elementos-3d'>
-                    <div id='logo-3d'>
-                        <img src="images/logo_3d.png" border="0" width="260" height="333" />
-                    </div>
-                    <div id='esmalte-3d'>
-                        <img src="images/esmaltes_3d.png" border="0" width="374" height="338" />
-                    </div>
-                    <div id='garota-3d'>
-                        <img src="images/garota_3d.png" border="0" width="603" height="702" />
-                    </div>
-                </div>
-                <div id='box_3d'>
-                    <div id='box_3d_off' class="hide">
-                        <a href="#" class="bt_box_3d_on"><img src="images/bt_box_slider_on.png" /></a>
-						<img src="images/ch_3d.png" />
-                    </div>
-                    <div id='box_3d_on'>
-                        <a href="#" class="bt_box_3d_off"><img src="images/bt_box_slider_off.png" /></a>
-						<img src="images/ch_3d.png" />
-						<img src="images/ch_3d_txt.png" style="margin-top:25px;"/>
-						<a href="http://www.topbeauty.com.br/produtos/5"><img src="images/bt_box_slider_mais.png"  style="float:right; margin-right:20px;" border="0"/></a>
-                    </div>
-                </div>
-            </div>
-            <div id="slide4">
-                <div id='elementos-crash'>
-                    <div id='logo-crash'>
-                        <img src="images/logo_crash.png" border="0" width="311" height="138" />
-                    </div>
-                    <div id='esmalte-crash'>
-                        <img src="images/esmaltes_crash.png" border="0" width="306" height="331" />
-                    </div>
-                    <div id='garota-crash'>
-                        <img src="images/garota_crash.png" border="0" width="662" height="707" />
-                    </div>
-                </div>
-                <div id='box_crash'>
-                    <div id='box_crash_off' class="hide">
-                        <a href="#" class="bt_box_crash_on"><img src="images/bt_box_slider_on.png" /></a>
-						<img src="images/ch_crash.png" />
-                    </div>
-                    <div id='box_crash_on'>
-                        <a href="#" class="bt_box_crash_off"><img src="images/bt_box_slider_off.png" /></a>
-						<img src="images/ch_crash.png" />
-						<img src="images/ch_crash_txt.png" style="margin-top:25px;"/>
-						<a href="http://www.topbeauty.com.br/produtos/10"><img src="images/bt_box_slider_mais.png"  style="float:right; margin-right:20px;" border="0"/></a>
-                    </div>
-                </div>
-            </div>
-            <div id="slide5">
-                <div id='elementos-oneftwo'>
-                    <div id='logo-oneftwo'>
-                        <img src="images/logo_oneftwo.png" border="0" width="117" height="193" />
-                    </div>
-                </div>
-                <div id='box_oneftwo'>
-                    <div id='box_oneftwo_off' class="hide">
-                        <a href="#" class="bt_box_oneftwo_on"><img src="images/bt_box_slider_on.png" /></a>
-						<img src="images/ch_one2two.png" />
-                    </div>
-                    <div id='box_oneftwo_on'>
-                        <a href="#" class="bt_box_oneftwo_off"><img src="images/bt_box_slider_off.png" /></a>
-						<img src="images/ch_one2two.png" />
-						<img src="images/ch_one2two_txt.png" style="margin-top:25px;"/>
-						<a href="http://www.topbeauty.com.br/produtos/4"><img src="images/bt_box_slider_mais.png"  style="float:right; margin-right:20px;" border="0"/></a>
-                    </div>
-                </div>
-            </div>
-            <div id="slide6">
-                <div id='elementos-basica'>
-                    <div id='logo-basica'>
-                        <img src="images/logo_basica.png" border="0" width="248" height="113" />
-                    </div>
-                    <div id='esmalte-basica'>
-                        <img src="images/esmaltes_basica.png" border="0" width="276" height="301" />
-                    </div>
-                    <div id='garota-basica'>
-                        <img src="images/garota_basica.png" border="0" width="575" height="699" />
-                    </div>
-                </div>
-                <div id='box_basica'>
-                    <div id='box_basica_off' class="hide">
-                        <a href="#"class="bt_box_basica_on"><img src="images/bt_box_slider_on.png" /></a>
-						<img src="images/ch_basica.png" />
-                    </div>
-                    <div id='box_basica_on'>
-                        <a href="#" class="bt_box_basica_off"><img src="images/bt_box_slider_off.png" /></a>
-						<img src="images/ch_basica.png" />
-						<img src="images/ch_basica_txt.png" style="margin-top:25px;"/>
-						<a href="http://www.topbeauty.com.br/produtos/9"><img src="images/bt_box_slider_mais.png"  style="float:right; margin-right:20px;" border="0"/></a>
-                    </div>
-                </div>
-            </div>
-            <div id="slide7">
-                <div id='elementos-sensitive'>
-                    <div id='logo-sensitive'>
-                        <img src="images/logo_sensitive.png" border="0" width="208" height="81" />
-                    </div>
-                    <div id='esmalte-sensitive'>
-                        <img src="images/esmaltes_sensitive.png" border="0" width="288" height="279" />
-                    </div>
-                    <div id='garota-sensitive'>
-                        <img src="images/garota_sensitive.png" border="0" width="664" height="699" />
-                    </div>
-                </div>
-                <div id='box_sensitive'>
-                    <div id='box_sensitive_off' class="hide">
-                        <a href="#" class="bt_box_sensitive_on"><img src="images/bt_box_slider_on.png" /></a>
-						<img src="images/ch_sensitive.png" />
-                    </div>
-                    <div id='box_sensitive_on'>
-                        <a href="#" class="bt_box_sensitive_off"><img src="images/bt_box_slider_off.png" /></a>
-						<img src="images/ch_sensitive.png" />
-						<img src="images/ch_sensitive_txt.png" style="margin-top:25px;"/>
-						<a href="http://www.topbeauty.com.br/produtos/8"><img src="images/bt_box_slider_mais.png"  style="float:right; margin-right:20px;" border="0"/></a>
-                    </div>
-                </div>
-            </div>
-            <div id="slide8">
-                <div id='elementos-adriane'>
-                    <div id='logo-adriane'>
-                        <img src="images/logo_adriane.png" border="0" width="357" height="57" />
-                    </div>
-                </div>
-                <div id='box_adriane'>
-                    <div id='box_adriane_off' class="hide">
-                        <a href="#" class="bt_box_adriane_on"><img src="images/bt_box_slider_on.png" /></a>
-						<img src="images/ch_adriane.png" />
-                    </div>
-                    <div id='box_adriane_on'>
-                        <a href="#" class="bt_box_adriane_off"><img src="images/bt_box_slider_off.png" /></a>
-						<img src="images/ch_adriane.png" />
-						<img src="images/ch_adriane_txt.png" style="margin-top:25px;"/>
-						<a href="http://www.topbeauty.com.br/produtos/3"><img src="images/bt_box_slider_mais.png"  style="float:right; margin-right:20px;" border="0"/></a>
-                    </div>
-                </div>
-            </div>
+            <img src="/images/star_2.gif">
         </div>
         <div id='nav_control'>
         	<div id='nav'></div>

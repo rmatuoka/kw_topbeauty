@@ -11,6 +11,11 @@ KwTopbeauty::Application.routes.draw do
   end
   resources :t_conosco
   resources :contato
+  resources :preloader do
+    collection do
+      get 'slides'
+    end
+  end
   resources :home
   resources :user_sessions
   resources :users
