@@ -29,6 +29,5 @@ class OndeEncontrarController < ApplicationController
 
   def popula_cidades
     @Cidades = Reseller.all(:conditions => ['state = ? and active =  true', params[:estado]], :group => "city", :order => "city ASC")
-    
   end
 end
