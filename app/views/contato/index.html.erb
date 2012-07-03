@@ -37,6 +37,11 @@ jQuery(document).ready(function() {
 					required: true,
 					email: true
 				},
+				"contact[city]": {
+					required: true,
+					city: true
+				},
+								
 				"contact[company]": {
 					required: true
 				},			
@@ -56,6 +61,8 @@ jQuery(document).ready(function() {
 					required: "Preencha seu e-mail de contato",
 					email: "Formato de email inválido"
 				},
+				"contact[city]": "Digite o Nome da  Cidade",
+				"contact[state]": "Escolha um Estado",
 				"contact[company]": "Digite o Nome da  Empresa",
 				"contact[message]": "Preencha o campo com sua mensagem ",
 			    "contact[phone]": "Preencha o seu telefone com sua mensagem "
@@ -88,6 +95,18 @@ jQuery(document).ready(function() {
 					<td><%=f.text_field :email , :class=>"input" %></td>
 				  </tr>
 				  <tr>
+					<td><img src="images/lb_cidade.png" width="47" height="14" class="Align_tit" /></td>
+				  </tr>
+				  <tr>
+					<td><%=f.text_field :city , :class=>"input" %></td>
+				  </tr>					  
+				  <tr>
+					<td><img src="images/lb_estado.png" width="46" height="14" class="Align_tit" /></td>
+				  </tr>
+				  <tr>
+					<td><%= f.select :state, ([["AC", "AC"], ["AL","AL"], ["AP", "AP"], ["AM", "AM"], ["BA", "BA"], ["CE", "CE"], ["DF", "DF"], ["ES", "ES"], ["GO", "GO"], ["MA", "MA"], ["MT", "MT"], ["MS", "MS"], ["MG", "MG"], ["PA", "PA"], ["PB", "PB"], ["PR", "PR"], ["PE", "PE"], ["PI", "PI"], ["RJ", "RJ"], ["RN", "RN"], ["RS", "RS"], ["RO", "RO"], ["RR", "RR"], ["SC", "SC"], ["SP", "SP"], ["SE", "SE"], ["TO", "TO"]]), :class= => "input" %> <br /><br /></td>
+				  </tr>	 			  			  			  
+				  <tr>
 					<td><img src="images/lb_empresa.png" width="58" height="14" class="Align_tit"  /></td>
 				  </tr>
 				  <tr>
@@ -108,7 +127,7 @@ jQuery(document).ready(function() {
 				  <tr>
 					<td valign="bottom"><%= f.check_box :receive %>
 					
-					<img src="images/lb_desejo_receber.png" width="268" height="15" style="vertical-align:top !important; margin-top:4px;" /></td>
+					<img src="images/lb_desejo_receber.png" width="248" height="15" style="vertical-align:top !important; margin-top:4px;" /></td>
 				  </tr>
 				  <tr>
 					<td><%=image_submit_tag("bt_enviar.png", :alt=>"Enviar", :title=>"Enviar", :class=>"botao") %></td>

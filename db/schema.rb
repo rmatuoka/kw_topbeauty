@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120329143631) do
+ActiveRecord::Schema.define(:version => 20120703145855) do
 
   create_table "banners", :force => true do |t|
     t.text     "texto"
@@ -54,15 +54,15 @@ ActiveRecord::Schema.define(:version => 20120329143631) do
     t.integer  "imghand_file_size"
     t.datetime "imghand_updated_at"
     t.text     "tip"
-    t.decimal  "modern",                  :precision => 10, :scale => 1, :default => 0.0
+    t.decimal  "modern",                  :precision => 10, :scale => 0, :default => 0
     t.integer  "modern_total",                                           :default => 0
-    t.decimal  "conservative",            :precision => 10, :scale => 1, :default => 0.0
+    t.decimal  "conservative",            :precision => 10, :scale => 0, :default => 0
     t.integer  "conservative_total",                                     :default => 0
-    t.decimal  "sexy",                    :precision => 10, :scale => 1, :default => 0.0
+    t.decimal  "sexy",                    :precision => 10, :scale => 0, :default => 0
     t.integer  "sexy_total",                                             :default => 0
-    t.decimal  "day",                     :precision => 10, :scale => 1, :default => 0.0
+    t.decimal  "day",                     :precision => 10, :scale => 0, :default => 0
     t.integer  "day_total",                                              :default => 0
-    t.decimal  "night",                   :precision => 10, :scale => 1, :default => 0.0
+    t.decimal  "night",                   :precision => 10, :scale => 0, :default => 0
     t.integer  "night_total",                                            :default => 0
   end
 
@@ -80,6 +80,8 @@ ActiveRecord::Schema.define(:version => 20120329143631) do
     t.integer  "curriculum_file_size"
     t.datetime "curriculum_updated_at"
     t.integer  "contact_type"
+    t.string   "city"
+    t.string   "state"
   end
 
   create_table "lines", :force => true do |t|
@@ -118,6 +120,27 @@ ActiveRecord::Schema.define(:version => 20120329143631) do
     t.integer  "category_id"
     t.string   "name"
     t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "providers", :force => true do |t|
+    t.string   "name"
+    t.string   "last_name"
+    t.string   "address"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zip_code"
+    t.integer  "number"
+    t.string   "phone"
+    t.string   "mobile"
+    t.string   "e_mail"
+    t.string   "category"
+    t.string   "business"
+    t.string   "area_of_​​expertise"
+    t.string   "business_phone"
+    t.string   "availability"
+    t.string   "performance_field"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

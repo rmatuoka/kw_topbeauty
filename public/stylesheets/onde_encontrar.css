@@ -20,9 +20,9 @@
 #ond_um{
 	background-image:url('../images/bg_ondeencontrar.png');
 	background-position:center top;
-	background-repeat:no-repeat;
+	background-repeat:repeat;
 	width:635px;
-	height:86px;
+	height:106px;
 	margin:0 auto;
 	margin-top:10px;
 	padding-top:10px;

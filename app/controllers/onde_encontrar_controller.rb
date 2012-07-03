@@ -25,6 +25,7 @@ class OndeEncontrarController < ApplicationController
         @retorno += "     <h3>#{r.fantasy_name}</h3>"
       end
       @retorno += "     <p>#{r.address}, #{r.number}</p>"
+      @retorno += "     <p>#{r.neibourhood}</p>"
       @retorno += "     <p>#{r.city} - #{r.state}</p>"
       @retorno += "     <p>#{r.phone}</p>"
       @retorno += "</div>"
