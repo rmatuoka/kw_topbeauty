@@ -124,27 +124,6 @@ ActiveRecord::Schema.define(:version => 20120703145855) do
     t.datetime "updated_at"
   end
 
-  create_table "providers", :force => true do |t|
-    t.string   "name"
-    t.string   "last_name"
-    t.string   "address"
-    t.string   "city"
-    t.string   "state"
-    t.string   "zip_code"
-    t.integer  "number"
-    t.string   "phone"
-    t.string   "mobile"
-    t.string   "e_mail"
-    t.string   "category"
-    t.string   "business"
-    t.string   "area_of_​​expertise"
-    t.string   "business_phone"
-    t.string   "availability"
-    t.string   "performance_field"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "resellers", :force => true do |t|
     t.string   "name"
     t.string   "fantasy_name"
