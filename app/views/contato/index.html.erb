@@ -41,7 +41,9 @@ jQuery(document).ready(function() {
 					required: true,
 					city: true
 				},
-								
+				"contact[state]": {
+					required: true,
+				},								
 				"contact[company]": {
 					required: true
 				},			
@@ -104,7 +106,7 @@ jQuery(document).ready(function() {
 					<td><img src="images/lb_estado.png" width="46" height="14" class="Align_tit" /></td>
 				  </tr>
 				  <tr>
-					<td><%= f.select :state, ([["AC", "AC"], ["AL","AL"], ["AP", "AP"], ["AM", "AM"], ["BA", "BA"], ["CE", "CE"], ["DF", "DF"], ["ES", "ES"], ["GO", "GO"], ["MA", "MA"], ["MT", "MT"], ["MS", "MS"], ["MG", "MG"], ["PA", "PA"], ["PB", "PB"], ["PR", "PR"], ["PE", "PE"], ["PI", "PI"], ["RJ", "RJ"], ["RN", "RN"], ["RS", "RS"], ["RO", "RO"], ["RR", "RR"], ["SC", "SC"], ["SP", "SP"], ["SE", "SE"], ["TO", "TO"]]), :class= => "input" %> <br /><br /></td>
+					<td><%= f.select :state, ([["AC", "AC"], ["AL","AL"], ["AP", "AP"], ["AM", "AM"], ["BA", "BA"], ["CE", "CE"], ["DF", "DF"], ["ES", "ES"], ["GO", "GO"], ["MA", "MA"], ["MT", "MT"], ["MS", "MS"], ["MG", "MG"], ["PA", "PA"], ["PB", "PB"], ["PR", "PR"], ["PE", "PE"], ["PI", "PI"], ["RJ", "RJ"], ["RN", "RN"], ["RS", "RS"], ["RO", "RO"], ["RR", "RR"], ["SC", "SC"], ["SP", "SP"], ["SE", "SE"], ["TO", "TO"]]), {:include_blank => true}, :class= => "input" %> <br /><br /></td>
 				  </tr>	 			  			  			  
 				  <tr>
 					<td><img src="images/lb_empresa.png" width="58" height="14" class="Align_tit"  /></td>
