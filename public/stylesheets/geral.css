@@ -296,14 +296,20 @@ div { }
 	}
 	
 #edd{
-	background-image:url('../images/bg_esmalte_dia.png');
+	/*background-image:url('../images/bg_esmalte_dia.png'); */
 	background-position:center top;
 	background-repeat:no-repeat;
 	width:107px;
 	height:189px;
 	float:left;
 	text-align:center;
+	clip:rect(0px 107px 189px 0px);
+	overflow:hidden;
 	}
+
+#edd img{
+	margin-left:-20px;
+}
 
 #edd-text{
 	background-image:url('../images/bg_esmalte_dia_texto.png');

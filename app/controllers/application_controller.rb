@@ -39,5 +39,15 @@ class ApplicationController < ActionController::Base
       @banner = Banner.first(:order => "RAND()")
       @lines = Line.all
       #.sqlCommand("SELECT * FROM lines WHERE ")
+      
+      #ESMALTE DO DIA
+      #cookies.delete :daily
+      
+      if cookies[:daily].blank?
+        @Daily =  Color.first(:conditions => ["tip IS NOT NULL"], :order => "RAND()")
+        cookies[:daily] = { :value => @Daily.id, :expires => 12.hour.from_now }
+      else
+        @Daily = Color.find(cookies[:daily].to_i)
+      end
    end
 end

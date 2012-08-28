@@ -163,18 +163,19 @@ jQuery(document).ready(function() {
 <div id='article'>
     	<div id='body_top'>
         	<div id='esmalte-do-dia'>
-            	<div id='edd-top'>
+            	<%if @Daily%>
+				<div id='edd-top'>
                 	<img src="images/tit-esmalte-dia.png" width="178" height="35" />
-                    <h1>New York Girl</h1>
+                    <h1><%=@Daily.name%></h1>
                 </div>
                 <div id='edd-body'>
                 	<div id='edd'>
-                		<img src="images/img_esmaltedia.png" width="74" height="202" />
+                		<!-- <img src="images/img_esmaltedia.png" width="74" height="202" /> -->
+						<%=image_tag(@Daily.imgenamel.url(), :height => "190")%>
                 	</div>
                     <div id='edd-text'>
-                    	<h1>O esmalte de hoje é o <b>New York Girl</b>, da linha <b>Ultimate Glitter.</b></h1>
-                		<p>Todo o charme e movimento de New York são demonstrados neste esmalte.<br />
-O brilho e astral da cidade são representados pelas partículas super grandes de glitter. Para você que também quer sentir a emoção de estar na Big Apple sem precisar ir até lá.</p>
+                    	<h1>O esmalte de hoje é o <b><%=@Daily.name%></b>, da linha <b><%=@Daily.product.category.line.name%>.</b></h1>
+                		<p><%=@Daily.tip%></p>
                 	</div>
                 </div>
                 <div id='edd-footer'>
@@ -184,6 +185,7 @@ O brilho e astral da cidade são representados pelas partículas super grandes d
 					<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
 					<iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.topbeautycosmeticos.com.br&amp;send=false&amp;layout=button_count&amp;width=60&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font=tahoma&amp;height=21&amp;appId=228638123874618" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:20px;" allowTransparency="true"></iframe>
                 </div>
+				<%end%>
             </div>
             <div id='vsh'>
             	<div id='top-vsh'>
