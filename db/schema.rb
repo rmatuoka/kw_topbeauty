@@ -54,15 +54,15 @@ ActiveRecord::Schema.define(:version => 20120703145855) do
     t.integer  "imghand_file_size"
     t.datetime "imghand_updated_at"
     t.text     "tip"
-    t.decimal  "modern",                  :precision => 10, :scale => 1, :default => 0.0
+    t.decimal  "modern",                  :precision => 10, :scale => 0, :default => 0
     t.integer  "modern_total",                                           :default => 0
-    t.decimal  "conservative",            :precision => 10, :scale => 1, :default => 0.0
+    t.decimal  "conservative",            :precision => 10, :scale => 0, :default => 0
     t.integer  "conservative_total",                                     :default => 0
-    t.decimal  "sexy",                    :precision => 10, :scale => 1, :default => 0.0
+    t.decimal  "sexy",                    :precision => 10, :scale => 0, :default => 0
     t.integer  "sexy_total",                                             :default => 0
-    t.decimal  "day",                     :precision => 10, :scale => 1, :default => 0.0
+    t.decimal  "day",                     :precision => 10, :scale => 0, :default => 0
     t.integer  "day_total",                                              :default => 0
-    t.decimal  "night",                   :precision => 10, :scale => 1, :default => 0.0
+    t.decimal  "night",                   :precision => 10, :scale => 0, :default => 0
     t.integer  "night_total",                                            :default => 0
   end
 
